@@ -24,6 +24,16 @@ const GlobalStyles = css`
     .menu-opend {
         overflow: hidden;
     }
+
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 48px;
+    }
 `;
 
 export default GlobalStyles;

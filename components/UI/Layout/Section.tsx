@@ -11,6 +11,7 @@ const Section = styled.section<SectionProps>`
     overflow: hidden;
 
     ${(props) => props.fullScreen && "min-height: calc(100vh);"}
+    background-color: ${(props) => props.theme.color.gray};
 
     ${BaseUI}
 `;
