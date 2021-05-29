@@ -5,6 +5,7 @@ const GlobalStyles = css`
         margin: 0;
         padding: 0;
         z-index: 1;
+        box-sizing: border-box;
     }
 
     html,
@@ -19,6 +20,8 @@ const GlobalStyles = css`
 
     button {
         font-family: "Poppins", sans-serif;
+        color: #e5e5e5;
+        cursor: pointer;
     }
 
     .menu-opend {

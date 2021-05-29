@@ -9,7 +9,6 @@ interface ColProps extends BaseUIProps {
 const Col = styled.div<ColProps>`
     display: flex;
     flex-direction: column;
-    width: 100%;
 
     ${(props) =>
         props.order &&

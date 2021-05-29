@@ -3,10 +3,25 @@ import Header from "components/UI/Header";
 import Container from "components/UI/Layout/Container";
 import Section from "components/UI/Layout/Section";
 import Text from "components/UI/Text";
+import { mq } from "utils/Responsive";
 
 function About() {
     return (
-        <Section fullScreen>
+        <Section position="relative">
+            <img
+                src="/about/images/blob1.svg"
+                alt=""
+                css={css`
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 150px;
+
+                    ${mq.sm} {
+                        width: unset;
+                    }
+                `}
+            />
             <Container>
                 <Header>About me</Header>
                 <Text
