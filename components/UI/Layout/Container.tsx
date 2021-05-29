@@ -9,9 +9,8 @@ const Container = styled.div<ContainerProps>`
     flex-direction: column;
 
     width: calc(100% - 2rem);
-    min-height: 100%;
 
-    overflow-x: hidden;
+    overflow: hidden;
 
     margin-left: auto;
     margin-right: auto;

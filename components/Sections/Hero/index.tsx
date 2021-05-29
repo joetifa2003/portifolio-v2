@@ -85,7 +85,12 @@ function Hero() {
                         </Text>
                     </Col>
                     <Col order={{ xs: 1, lg: 2 }}>
-                        <img src="/hero/images/hero.svg" alt="" width="100%" />
+                        <img
+                            src="/hero/images/hero.svg"
+                            alt=""
+                            width="100%"
+                            height="100%"
+                        />
                     </Col>
                 </Grid>
             </Container>
