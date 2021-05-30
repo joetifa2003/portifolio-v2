@@ -15,6 +15,10 @@ class MyDocument extends Document {
                         async
                         src="//gc.zgo.at/count.js"
                     ></script>
+                    <meta
+                        name="google-site-verification"
+                        content="78OFSziPbL_z3R5xrBKVCsoQil08dEthi-KWCnQQMPs"
+                    />
                 </Head>
                 <body>
                     <Main />
