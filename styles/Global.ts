@@ -16,6 +16,9 @@ const GlobalStyles = css`
         font-family: "Poppins", sans-serif;
         width: 100%;
         color: #e5e5e5;
+
+        font-size: 16px;
+        line-height: 1.2;
     }
 
     button {

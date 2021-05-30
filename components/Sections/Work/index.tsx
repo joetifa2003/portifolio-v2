@@ -14,6 +14,7 @@ function Work() {
                     <Col>
                         <ProjectCard
                             title="Burgerino"
+                            imageUrl="/work/images/projects/Burgerino.png"
                             descreption="Simple website for a burger restraut."
                             technologies={["Figma", "Next js", "Emotion"]}
                         />
@@ -21,6 +22,7 @@ function Work() {
                     <Col>
                         <ProjectCard
                             title="Project 2"
+                            imageUrl=""
                             descreption="Simple website for a burger restraut."
                             technologies={["Figma", "Next js", "Emotion"]}
                         />
@@ -28,6 +30,7 @@ function Work() {
                     <Col>
                         <ProjectCard
                             title="Project 3"
+                            imageUrl=""
                             descreption="Simple website for a burger restraut."
                             technologies={["Figma", "Next js", "Emotion"]}
                         />

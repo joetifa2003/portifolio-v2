@@ -38,9 +38,9 @@ function Hero() {
                             color="darkCyan"
                             fontSize={{ xs: "1.5rem", md: "2rem", xl: "3rem" }}
                             lineHeight={{
-                                xs: "1.5rem",
-                                md: "2rem",
-                                xl: "3rem",
+                                xs: "2.5rem",
+                                md: "3rem",
+                                xl: "4rem",
                             }}
                             letterSpaceing={{ xs: "0.2em" }}
                         >
@@ -50,11 +50,10 @@ function Hero() {
                             fontWeight="bold"
                             fontSize={{ xs: "2.5rem", md: "3rem", xl: "6rem" }}
                             lineHeight={{
-                                xs: "2.5rem",
-                                md: "3rem",
-                                xl: "6rem",
+                                xs: "3.5rem",
+                                md: "4rem",
+                                xl: "7rem",
                             }}
-                            marginTop="1rem"
                         >
                             Youssef Ahmed
                         </Text>
@@ -65,20 +64,13 @@ function Hero() {
                                 md: "3rem",
                                 xl: "4.5rem",
                             }}
-                            lineHeight={{
-                                xs: "2.5rem",
-                                md: "3rem",
-                                xl: "4.5rem",
-                            }}
-                            marginTop="1rem"
                         >
                             I build things for the web.
                         </Text>
                         <Text
                             fontWeight="bold"
                             fontSize={{ xs: "1.5rem", xl: "2rem" }}
-                            lineHeight={{ xs: "2rem", xl: "2.5rem" }}
-                            marginTop="1rem"
+                            lineHeight={{ xs: "2.5rem", xl: "3rem" }}
                         >
                             I’m a full stack web devolper from Egypt that loves
                             javascript.

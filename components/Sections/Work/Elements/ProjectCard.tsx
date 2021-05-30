@@ -22,24 +22,36 @@ function ProjectCard({
     title,
     descreption,
     technologies,
+    imageUrl,
 }: {
     title: string;
     descreption: string;
     technologies: string[];
+    imageUrl: string;
 }) {
     return (
         <Card>
             <Grid columns={{ xs: "1fr", lg: "1fr 1fr" }} gap="0">
                 <Col>
-                    <img
-                        src="/work/images/project1.png"
-                        alt=""
-                        width="100%"
-                        height="100%"
-                        css={css`
-                            object-fit: cover;
-                        `}
-                    />
+                    {imageUrl ? (
+                        <img
+                            src={imageUrl}
+                            alt=""
+                            width="100%"
+                            height="100%"
+                            css={css`
+                                object-fit: cover;
+                            `}
+                        />
+                    ) : (
+                        <div
+                            css={css`
+                                width: 100%;
+                                height: 100%;
+                                background-color: #a1a1a1;
+                            `}
+                        ></div>
+                    )}
                 </Col>
                 <CardBody bgColor="lightGray">
                     <Text

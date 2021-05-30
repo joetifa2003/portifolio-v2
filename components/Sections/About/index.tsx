@@ -27,7 +27,7 @@ function About() {
                 <Text
                     fontWeight="bold"
                     fontSize={{ xs: "1.5rem", lg: "3rem" }}
-                    lineHeight={{ xs: "2rem", lg: "4rem" }}
+                    lineHeight={{ xs: "2rem", lg: "4.5rem" }}
                 >
                     Hello! My name is Youssef and I enjoy creating things that
                     live on the internet. My interest in web development started
@@ -52,7 +52,7 @@ function About() {
                         margin-top: 1rem;
                     `}
                 >
-                    {["React", "Vue"].map((item) => (
+                    {["React", "Vue", "JavaScipt(ES6+)"].map((item) => (
                         <Text
                             fontWeight="bold"
                             fontSize={{ xs: "1.5rem" }}

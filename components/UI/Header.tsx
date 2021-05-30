@@ -7,17 +7,19 @@ const HeaderWrapper = styled.h1`
     font-size: 1.75rem;
     line-height: 2rem;
     letter-spacing: 0.2em;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
     ${mq.sm} {
         font-size: 2.5rem;
-        line-height: 2.5rem;
+        line-height: 3.5rem;
     }
 
     ${mq.lg} {
         font-size: 4rem;
-        line-height: 4rem;
+        line-height: 5rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
     }
 `;
 
