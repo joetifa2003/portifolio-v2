@@ -23,11 +23,13 @@ function ProjectCard({
     descreption,
     technologies,
     imageUrl,
+    link,
 }: {
     title: string;
     descreption: string;
     technologies: string[];
     imageUrl: string;
+    link: string;
 }) {
     return (
         <Card>
@@ -77,7 +79,6 @@ function ProjectCard({
                     </Text>
                     <Text
                         as="p"
-                        fontWeight="bold"
                         fontSize={{ xs: "1rem", xl: "1.5rem" }}
                         lineHeight={{ xs: "1.5rem", xl: "2rem" }}
                         marginTop="2rem"
@@ -85,7 +86,6 @@ function ProjectCard({
                         {descreption}
                     </Text>
                     <Text
-                        fontWeight="bold"
                         marginTop="2rem"
                         fontSize={{ xs: "1rem" }}
                         lineHeight={{ xs: "1.5rem" }}
@@ -95,7 +95,7 @@ function ProjectCard({
                     <div>
                         {technologies.map((item) => (
                             <Text
-                                fontWeight="bold"
+                                key={item}
                                 fontSize={{ xs: "1rem" }}
                                 lineHeight={{ xs: "1.5rem" }}
                             >
@@ -109,7 +109,13 @@ function ProjectCard({
                             padding-top: 2rem;
                         `}
                     >
-                        <Button>Go to website</Button>
+                        <Button
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={link}
+                        >
+                            Go to website
+                        </Button>
                     </div>
                 </CardBody>
             </Grid>

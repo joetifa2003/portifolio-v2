@@ -3,11 +3,14 @@ import { BaseUI, BaseUIProps } from "./BaseUI";
 
 interface Button extends BaseUIProps {}
 
-const Button = styled.button<BaseUIProps>`
+const Button = styled.a<BaseUIProps>`
+    display: inline-block;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.5rem;
     border: 4px solid ${(props) => props.theme.color.cyan};
+
+    cursor: pointer;
 
     background-color: transparent;
 

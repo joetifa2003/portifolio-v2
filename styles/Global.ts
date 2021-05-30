@@ -40,6 +40,14 @@ const GlobalStyles = css`
         margin-inline-end: 0px;
         padding-inline-start: 48px;
     }
+
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+        color: inherit;
+        text-decoration: inherit;
+    }
 `;
 
 export default GlobalStyles;

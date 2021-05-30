@@ -48,11 +48,11 @@ function Hero() {
                         </Text>
                         <Text
                             fontWeight="bold"
-                            fontSize={{ xs: "2.5rem", md: "3rem", xl: "6rem" }}
+                            fontSize={{ xs: "2.5rem", md: "3rem", xl: "5rem" }}
                             lineHeight={{
                                 xs: "3.5rem",
                                 md: "4rem",
-                                xl: "7rem",
+                                xl: "6rem",
                             }}
                         >
                             Youssef Ahmed
@@ -60,17 +60,22 @@ function Hero() {
                         <Text
                             fontWeight="bold"
                             fontSize={{
-                                xs: "2.5rem",
+                                xs: "2rem",
                                 md: "3rem",
-                                xl: "4.5rem",
+                                xl: "4rem",
+                            }}
+                            lineHeight={{
+                                xs: "3rem",
+                                md: "4rem",
+                                xl: "5rem",
                             }}
                         >
                             I build things for the web.
                         </Text>
                         <Text
-                            fontWeight="bold"
                             fontSize={{ xs: "1.5rem", xl: "2rem" }}
                             lineHeight={{ xs: "2.5rem", xl: "3rem" }}
+                            marginTop="1rem"
                         >
                             I’m a full stack web devolper from Egypt that loves
                             javascript.

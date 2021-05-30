@@ -24,25 +24,33 @@ function About() {
             />
             <Container>
                 <Header>About me</Header>
-                <Text
-                    fontWeight="bold"
-                    fontSize={{ xs: "1.5rem", lg: "3rem" }}
-                    lineHeight={{ xs: "2rem", lg: "4.5rem" }}
+                <div
+                    css={css`
+                        ${mq.lg} {
+                            max-width: 75%;
+                        }
+                    `}
                 >
-                    Hello! My name is Youssef and I enjoy creating things that
-                    live on the internet. My interest in web development started
-                    back in 2015 when I decided to convert an android app to a
-                    website — turns out hacking together a simple website taught
-                    me a lot about HTML, CSS & JavaScript!
-                    <br />
-                    <br />
-                    Fast-forward to today, and i have learned alot about web
-                    devolpment and I have worked on alot of side projects!
-                </Text>
+                    <Text
+                        fontSize={{ xs: "1.5rem", lg: "2rem" }}
+                        lineHeight={{ xs: "2rem", lg: "3rem" }}
+                        textAlign={{ xs: "", lg: "justify" }}
+                    >
+                        Hello! My name is Youssef and I enjoy creating things
+                        that live on the internet. My interest in web
+                        development started back in 2015 when I decided to
+                        convert an android app to a website — turns out hacking
+                        together a simple website taught me a lot about HTML,
+                        CSS & JavaScript!
+                        <br />
+                        <br />
+                        Fast-forward to today, and i have learned alot about web
+                        devolpment and I have worked on alot of side projects!
+                    </Text>
+                </div>
                 <Text
-                    fontWeight="bold"
-                    fontSize={{ xs: "1.5rem", lg: "2rem" }}
-                    lineHeight={{ xs: "2rem", lg: "2.5rem" }}
+                    fontSize={{ xs: "1.5rem", lg: "1.5rem" }}
+                    lineHeight={{ xs: "2rem", lg: "2rem" }}
                     marginTop="2rem"
                 >
                     Here are a few technologies I've been working with recently
@@ -54,7 +62,7 @@ function About() {
                 >
                     {["React", "Vue", "JavaScipt(ES6+)"].map((item) => (
                         <Text
-                            fontWeight="bold"
+                            key={item}
                             fontSize={{ xs: "1.5rem" }}
                             lineHeight={{ xs: "2rem" }}
                         >

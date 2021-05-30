@@ -17,22 +17,7 @@ function Work() {
                             imageUrl="/work/images/projects/Burgerino.png"
                             descreption="Simple website for a burger restraut."
                             technologies={["Figma", "Next js", "Emotion"]}
-                        />
-                    </Col>
-                    <Col>
-                        <ProjectCard
-                            title="Project 2"
-                            imageUrl=""
-                            descreption="Simple website for a burger restraut."
-                            technologies={["Figma", "Next js", "Emotion"]}
-                        />
-                    </Col>
-                    <Col>
-                        <ProjectCard
-                            title="Project 3"
-                            imageUrl=""
-                            descreption="Simple website for a burger restraut."
-                            technologies={["Figma", "Next js", "Emotion"]}
+                            link="https://burger-ruddy.vercel.app/"
                         />
                     </Col>
                 </Grid>
