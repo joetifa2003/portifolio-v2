@@ -49,7 +49,7 @@ function About() {
                     </Text>
                 </div>
                 <Text
-                    fontSize={{ xs: "1.5rem", lg: "1.5rem" }}
+                    fontSize={{ xs: "1.25rem", lg: "1.5rem" }}
                     lineHeight={{ xs: "2rem", lg: "2rem" }}
                     marginTop="2rem"
                 >
@@ -63,7 +63,7 @@ function About() {
                     {["React", "Vue", "JavaScipt(ES6+)"].map((item) => (
                         <Text
                             key={item}
-                            fontSize={{ xs: "1.5rem" }}
+                            fontSize={{ xs: "1.25rem" }}
                             lineHeight={{ xs: "2rem" }}
                         >
                             - {item}

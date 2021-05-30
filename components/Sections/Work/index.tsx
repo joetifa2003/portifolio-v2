@@ -14,7 +14,10 @@ function Work() {
                     <Col>
                         <ProjectCard
                             title="Burgerino"
-                            imageUrl="/work/images/projects/Burgerino.png"
+                            imageUrl={{
+                                fallback: "/work/images/projects/Burgerino.png",
+                                webp: "/work/images/projects/Burgerino.webp",
+                            }}
                             descreption="Simple website for a burger restraut."
                             technologies={["Figma", "Next js", "Emotion"]}
                             link="https://burger-ruddy.vercel.app/"

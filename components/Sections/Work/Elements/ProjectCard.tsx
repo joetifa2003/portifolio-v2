@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Button from "components/UI/Button";
+import Image from "components/UI/Image";
 import Col from "components/UI/Layout/Col";
 import Grid from "components/UI/Layout/Grid";
 import Text from "components/UI/Text";
@@ -28,7 +29,10 @@ function ProjectCard({
     title: string;
     descreption: string;
     technologies: string[];
-    imageUrl: string;
+    imageUrl: {
+        webp?: string;
+        fallback?: string;
+    };
     link: string;
 }) {
     return (
@@ -36,12 +40,14 @@ function ProjectCard({
             <Grid columns={{ xs: "1fr", lg: "1fr 1fr" }} gap="0">
                 <Col>
                     {imageUrl ? (
-                        <img
-                            src={imageUrl}
-                            alt=""
-                            width="100%"
-                            height="100%"
-                            css={css`
+                        <Image
+                            webp={imageUrl.webp}
+                            fallback={imageUrl.fallback}
+                            width={1280}
+                            height={720}
+                            cssProp={css`
+                                width: 100%;
+                                height: 100%;
                                 object-fit: cover;
                             `}
                         />

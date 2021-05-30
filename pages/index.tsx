@@ -2,14 +2,24 @@ import About from "components/Sections/About";
 import Hero from "components/Sections/Hero";
 import Work from "components/Sections/Work";
 import Navbar from "components/UI/Layout/Navbar";
+import { NextSeo } from "next-seo";
+import { Element } from "react-scroll";
 
 function Index() {
     return (
         <>
+            <NextSeo
+                title="Youssef Ahmed | Full Stack web developer"
+                description="Full Stack web developer from Egypt."
+            />
             <Navbar />
             <Hero />
-            <About />
-            <Work />
+            <Element name="about-me">
+                <About />
+            </Element>
+            <Element name="my-work">
+                <Work />
+            </Element>
         </>
     );
 }

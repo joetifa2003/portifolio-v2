@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { Link } from "react-scroll";
 
-const NavbarLinkWrapper = styled.div`
+const NavbarLinkWrapper = styled(Link)`
     font-family: ${(props) => props.theme.font.mono};
     font-weight: bold;
     font-size: 1.5rem;
@@ -13,9 +14,25 @@ const NavbarLinkWrapper = styled.div`
     padding-right: 1rem;
 `;
 
-function NavbarLink({ children }: { children: any }) {
+function NavbarLink({
+    children,
+    to,
+    onClick,
+}: {
+    children: any;
+    to: string;
+    onClick: any;
+}) {
     return (
-        <NavbarLinkWrapper>
+        <NavbarLinkWrapper
+            to={to}
+            smooth={true}
+            spy={true}
+            hashSpy={true}
+            onClick={() => {
+                onClick();
+            }}
+        >
             <span
                 css={(theme) => css`
                     color: ${theme.color.darkCyan};
