@@ -1,9 +1,12 @@
 import { css } from "@emotion/react";
+import Button from "components/UI/Button";
 import Col from "components/UI/Layout/Col";
 import Container from "components/UI/Layout/Container";
 import Grid from "components/UI/Layout/Grid";
 import Section from "components/UI/Layout/Section";
 import Text from "components/UI/Text";
+import { FaArrowDown } from "react-icons/fa";
+import { scroller } from "react-scroll";
 import SideDiv from "./Elements/SideDiv";
 
 function Hero() {
@@ -80,6 +83,22 @@ function Hero() {
                             I’m a full stack web devolper from Egypt that loves
                             javascript.
                         </Text>
+                        <div
+                            css={css`
+                                margin-top: 2rem;
+                            `}
+                        >
+                            <Button
+                                as="button"
+                                onClick={() => {
+                                    scroller.scrollTo("about-me", {
+                                        smooth: true,
+                                    });
+                                }}
+                            >
+                                About me <FaArrowDown size="16px" />
+                            </Button>
+                        </div>
                     </Col>
                     <Col order={{ xs: 1, lg: 2 }}>
                         <img
