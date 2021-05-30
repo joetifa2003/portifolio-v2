@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import Container from "../../Container";
 
 const NavbarContainer = styled(Container)`
+    position: relative;
+
     display: flex;
     flex-direction: row;
     align-items: center;

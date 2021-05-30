@@ -12,8 +12,8 @@ const NavbarBrandWrapper = styled.div`
     font-family: ${(props) => props.theme.font.mono};
 
     ${mq.md} {
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+        font-size: 2.25rem;
+        line-height: 3.25rem;
     }
 `;
 

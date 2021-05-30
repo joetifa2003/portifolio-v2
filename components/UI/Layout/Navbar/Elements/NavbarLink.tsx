@@ -5,7 +5,7 @@ const NavbarLinkWrapper = styled.div`
     font-family: ${(props) => props.theme.font.mono};
     font-weight: bold;
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 2.5rem;
 
     cursor: pointer;
 

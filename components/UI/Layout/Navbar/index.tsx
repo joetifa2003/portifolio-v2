@@ -1,3 +1,5 @@
+import { Sling } from "hamburger-react";
+import HamburgerMenu from "./Elements/HamburgerMenu";
 import NavbarBrand from "./Elements/NavbarBrand";
 import NavbarContainer from "./Elements/NavbarContainer";
 import NavbarLink from "./Elements/NavbarLink";
@@ -9,6 +11,9 @@ function Navbar() {
         <NavbarWrapper>
             <NavbarContainer>
                 <NavbarBrand />
+                <HamburgerMenu>
+                    <Sling />
+                </HamburgerMenu>
                 <NavbarlinksWrapper>
                     <NavbarLink>aboutMe</NavbarLink>
                     <NavbarLink>myWork</NavbarLink>

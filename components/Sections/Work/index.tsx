@@ -7,7 +7,7 @@ import ProjectCard from "./Elements/ProjectCard";
 
 function Work() {
     return (
-        <Section>
+        <Section fullScreen>
             <Container>
                 <Header>My work</Header>
                 <Grid columns="1f">

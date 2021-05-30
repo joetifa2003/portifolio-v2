@@ -16,8 +16,8 @@ const HeaderWrapper = styled.h1`
     }
 
     ${mq.lg} {
-        font-size: 4rem;
-        line-height: 5rem;
+        font-size: 3rem;
+        line-height: 4rem;
         margin-top: 4rem;
         margin-bottom: 4rem;
     }

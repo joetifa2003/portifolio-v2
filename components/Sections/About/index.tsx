@@ -32,7 +32,7 @@ function About() {
                     `}
                 >
                     <Text
-                        fontSize={{ xs: "1.5rem", lg: "2rem" }}
+                        fontSize={{ xs: "1.25rem", lg: "2rem" }}
                         lineHeight={{ xs: "2rem", lg: "3rem" }}
                         textAlign={{ xs: "", lg: "justify" }}
                     >
