@@ -1,5 +1,5 @@
 import { Sling } from "hamburger-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HamburgerMenu from "./Elements/HamburgerMenu";
 import MNavLinksWrapper from "./Elements/MNavlinksWrapper";
 import NavbarBrand from "./Elements/NavbarBrand";
@@ -23,6 +23,14 @@ const navBarLinks = [
 
 function Navbar() {
     const [menuOpened, setMenuOpened] = useState(false);
+
+    useEffect(() => {
+        if (menuOpened) {
+            document.body.classList.add("menu-opened");
+        } else {
+            document.body.classList.remove("menu-opened");
+        }
+    }, [menuOpened]);
 
     return (
         <NavbarWrapper>

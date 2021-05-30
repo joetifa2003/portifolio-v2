@@ -48,6 +48,10 @@ const GlobalStyles = css`
         color: inherit;
         text-decoration: inherit;
     }
+
+    .menu-opened {
+        overflow: hidden;
+    }
 `;
 
 export default GlobalStyles;
