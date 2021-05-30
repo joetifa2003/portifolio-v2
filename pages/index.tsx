@@ -11,6 +11,12 @@ function Index() {
             <NextSeo
                 title="Youssef Ahmed | Full Stack web developer"
                 description="Full Stack web developer from Egypt."
+                openGraph={{
+                    images: [{ url: "/SocialImage.png" }],
+                }}
+                twitter={{
+                    cardType: "summary_large_image",
+                }}
             />
             <Navbar />
             <Hero />
