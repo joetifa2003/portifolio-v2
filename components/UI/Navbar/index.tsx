@@ -1,6 +1,6 @@
 import { Sling } from "hamburger-react";
 import { useEffect, useState } from "react";
-import Container from "../Container";
+import Container from "../Layout/Container";
 import HamburgerMenu from "./Elements/HamburgerMenu";
 import MNavLinksWrapper from "./Elements/MNavlinksWrapper";
 import NavbarBrand from "./Elements/NavbarBrand";

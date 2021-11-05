@@ -1,7 +1,7 @@
 import About from "components/Sections/About";
 import Hero from "components/Sections/Hero";
 import Work from "components/Sections/Work";
-import Navbar from "components/UI/Layout/Navbar";
+import Navbar from "components/UI/Navbar";
 import { NextSeo } from "next-seo";
 import { Element } from "react-scroll";
 
