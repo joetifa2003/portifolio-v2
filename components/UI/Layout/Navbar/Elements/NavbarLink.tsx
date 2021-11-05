@@ -1,9 +1,7 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import { Link } from "react-scroll";
+import tw, { styled } from "twin.macro";
 
 const NavbarLinkWrapper = styled(Link)`
-    font-family: ${(props) => props.theme.font.mono};
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2.5rem;
@@ -12,6 +10,8 @@ const NavbarLinkWrapper = styled(Link)`
 
     padding-left: 1rem;
     padding-right: 1rem;
+
+    ${tw`font-mono`}
 `;
 
 function NavbarLink({
@@ -33,21 +33,9 @@ function NavbarLink({
                 onClick();
             }}
         >
-            <span
-                css={(theme) => css`
-                    color: ${theme.color.darkCyan};
-                `}
-            >
-                .
-            </span>
+            <span tw="text-darkCyan">.</span>
             {children}
-            <span
-                css={(theme) => css`
-                    color: ${theme.color.cyan};
-                `}
-            >
-                ()
-            </span>
+            <span tw="text-cyan">()</span>
         </NavbarLinkWrapper>
     );
 }

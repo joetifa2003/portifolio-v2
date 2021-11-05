@@ -1,7 +1,6 @@
-import styled from "@emotion/styled";
-import { BaseUI, BaseUIProps } from "../BaseUI";
+import tw, { styled } from "twin.macro";
 
-interface SectionProps extends BaseUIProps {
+interface SectionProps {
     fullScreen?: boolean;
 }
 
@@ -11,9 +10,7 @@ const Section = styled.section<SectionProps>`
     overflow: hidden;
 
     ${(props) => props.fullScreen && "min-height: calc(100vh);"}
-    background-color: ${(props) => props.theme.color.gray};
-
-    ${BaseUI}
+    ${tw`bg-gray`}
 `;
 
 export default Section;

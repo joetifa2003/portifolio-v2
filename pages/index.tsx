@@ -5,7 +5,7 @@ import Navbar from "components/UI/Layout/Navbar";
 import { NextSeo } from "next-seo";
 import { Element } from "react-scroll";
 
-function Index() {
+const App = () => {
     return (
         <>
             <NextSeo
@@ -28,6 +28,6 @@ function Index() {
             </Element>
         </>
     );
-}
+};
 
-export default Index;
+export default App;

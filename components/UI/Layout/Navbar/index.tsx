@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import HamburgerMenu from "./Elements/HamburgerMenu";
 import MNavLinksWrapper from "./Elements/MNavlinksWrapper";
 import NavbarBrand from "./Elements/NavbarBrand";
-import NavbarContainer from "./Elements/NavbarContainer";
 import NavbarLink from "./Elements/NavbarLink";
 import NavbarlinksWrapper from "./Elements/NavbarlinksWrapper";
 import NavbarMenu from "./Elements/NavbarMenu";
@@ -35,7 +34,7 @@ function Navbar() {
     return (
         <NavbarWrapper>
             <ScrollToTop />
-            <NavbarContainer>
+            <div tw="container relative flex items-center justify-between">
                 <NavbarMenu opened={menuOpened}>
                     <MNavLinksWrapper>
                         {navBarLinks.map((link) => (
@@ -64,7 +63,7 @@ function Navbar() {
                         </NavbarLink>
                     ))}
                 </NavbarlinksWrapper>
-            </NavbarContainer>
+            </div>
         </NavbarWrapper>
     );
 }

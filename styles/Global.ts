@@ -13,16 +13,13 @@ const GlobalStyles = css`
     #__next {
         display: flex;
         flex-direction: column;
-        font-family: "Poppins", sans-serif;
         width: 100%;
         color: #e5e5e5;
-
         font-size: 16px;
         line-height: 1.2;
     }
 
     button {
-        font-family: "Poppins", sans-serif;
         color: #e5e5e5;
         cursor: pointer;
     }

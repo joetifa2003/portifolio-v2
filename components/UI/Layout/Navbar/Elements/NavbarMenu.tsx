@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled, theme } from "twin.macro";
 
 interface NavbarMenuProps {
     opened: boolean;
@@ -10,7 +10,7 @@ const NavbarMenu = styled.aside<NavbarMenuProps>`
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: ${(props) => props.theme.color.lightGray};
+    background-color: ${theme`colors.lightGray`};
 
     transition: all 500ms ease-in-out;
 

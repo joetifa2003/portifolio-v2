@@ -1,93 +1,31 @@
-import { css } from "@emotion/react";
 import Button from "components/UI/Button";
-import Col from "components/UI/Layout/Col";
-import Container from "components/UI/Layout/Container";
-import Grid from "components/UI/Layout/Grid";
 import Section from "components/UI/Layout/Section";
-import Text from "components/UI/Text";
 import { FaArrowDown } from "react-icons/fa";
 import { scroller } from "react-scroll";
 import SideDiv from "./Elements/SideDiv";
 
 function Hero() {
     return (
-        <Section
-            fullScreen
-            position="relative"
-            bgColor="gray"
-            justifyContent="center"
-        >
+        <Section fullScreen tw="relative bg-gray justify-center">
             <SideDiv />
-            <img
-                src="/hero/images/blob2.svg"
-                css={css`
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                `}
-            />
-            <Container paddingTop="80px">
-                <Grid
-                    columns={{
-                        xs: "1fr",
-                        lg: "8fr 4fr",
-                    }}
-                    alignItems="center"
-                >
-                    <Col order={{ xs: 2, lg: 1 }}>
-                        <Text
-                            fontFamily="mono"
-                            fontWeight="bold"
-                            color="darkCyan"
-                            fontSize={{ xs: "1.5rem", md: "2rem", xl: "3rem" }}
-                            lineHeight={{
-                                xs: "2.5rem",
-                                md: "3rem",
-                                xl: "4rem",
-                            }}
-                            letterSpaceing={{ xs: "0.2em" }}
-                        >
+            <img src="/hero/images/blob2.svg" tw="absolute bottom-0 right-0" />
+            <div tw="container pt-20">
+                <div tw="flex flex-col lg:flex-row space-x-4 items-center">
+                    <div tw="w-full lg:w-8/12">
+                        <div tw="font-mono text-darkCyan font-bold text-2xl md:text-3xl xl:text-5xl tracking-[0.2em]">
                             Hi, my name is
-                        </Text>
-                        <Text
-                            fontWeight="bold"
-                            fontSize={{ xs: "2.5rem", md: "3rem", xl: "5rem" }}
-                            lineHeight={{
-                                xs: "3.5rem",
-                                md: "4rem",
-                                xl: "6rem",
-                            }}
-                        >
+                        </div>
+                        <div tw="font-bold text-4xl md:text-5xl xl:text-7xl">
                             Youssef Ahmed
-                        </Text>
-                        <Text
-                            fontWeight="bold"
-                            fontSize={{
-                                xs: "2rem",
-                                md: "3rem",
-                                xl: "4rem",
-                            }}
-                            lineHeight={{
-                                xs: "3rem",
-                                md: "4rem",
-                                xl: "5rem",
-                            }}
-                        >
+                        </div>
+                        <div tw="font-bold text-4xl md:text-5xl xl:text-6xl">
                             I build things for the web.
-                        </Text>
-                        <Text
-                            fontSize={{ xs: "1.5rem", xl: "2rem" }}
-                            lineHeight={{ xs: "2.5rem", xl: "3rem" }}
-                            marginTop="1rem"
-                        >
+                        </div>
+                        <div tw="text-2xl xl:text-3xl mt-4">
                             I’m a full stack web devolper from Egypt that loves
                             javascript.
-                        </Text>
-                        <div
-                            css={css`
-                                margin-top: 2rem;
-                            `}
-                        >
+                        </div>
+                        <div tw="mt-8">
                             <Button
                                 as="button"
                                 onClick={() => {
@@ -96,20 +34,20 @@ function Hero() {
                                     });
                                 }}
                             >
-                                About me <FaArrowDown size="16px" />
+                                <div>About me</div> <FaArrowDown size="16px" />
                             </Button>
                         </div>
-                    </Col>
-                    <Col order={{ xs: 1, lg: 2 }}>
+                    </div>
+                    <div tw="w-full lg:w-4/12">
                         <img
                             src="/hero/images/hero.svg"
                             alt=""
                             width="100%"
                             height="100%"
                         />
-                    </Col>
-                </Grid>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </Section>
     );
 }

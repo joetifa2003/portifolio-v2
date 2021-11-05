@@ -1,120 +1,57 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import Button from "components/UI/Button";
-import Image from "components/UI/Image";
-import Col from "components/UI/Layout/Col";
-import Grid from "components/UI/Layout/Grid";
-import Text from "components/UI/Text";
-import { mq } from "utils/Responsive";
+import tw, { styled } from "twin.macro";
 
-const Card = styled.div``;
-
-const CardBody = styled(Col)`
-    padding: 1rem;
+const CardBody = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
 
-    ${mq.xl} {
-        padding: 3rem;
-    }
+    ${tw`p-4 xl:p-12`}
 `;
 
 function ProjectCard({
     title,
-    descreption,
+    description,
     technologies,
     imageUrl,
     link,
 }: {
     title: string;
-    descreption: string;
+    description: string;
     technologies: string[];
-    imageUrl: {
-        webp?: string;
-        fallback?: string;
-    };
+    imageUrl: string;
     link: string;
 }) {
     return (
-        <Card>
-            <Grid columns={{ xs: "1fr", lg: "1fr 1fr" }} gap="0">
-                <Col>
+        <div>
+            <div tw="flex flex-col lg:flex-row">
+                <div tw="w-full lg:w-6/12">
                     {imageUrl ? (
-                        <Image
-                            webp={imageUrl.webp}
-                            fallback={imageUrl.fallback}
+                        <img
+                            src={imageUrl}
                             width={1280}
                             height={720}
-                            cssProp={css`
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                            `}
+                            tw="w-full h-full object-cover"
                         />
                     ) : (
-                        <div
-                            css={css`
-                                width: 100%;
-                                height: 100%;
-                                background-color: #a1a1a1;
-                            `}
-                        ></div>
+                        <div tw="w-full h-full bg-[#a1a1a1]"></div>
                     )}
-                </Col>
-                <CardBody bgColor="lightGray">
-                    <Text
-                        fontWeight="bold"
-                        fontSize={{ xs: "2rem", xl: "4rem" }}
-                        lineHeight={{ xs: "2rem", xl: "4rem" }}
-                    >
-                        <span
-                            css={(theme) => css`
-                                color: ${theme.color.darkCyan};
-                            `}
-                        >
-                            {"<"}
-                        </span>
+                </div>
+                <CardBody tw="w-full lg:w-6/12">
+                    <div tw="font-bold text-3xl xl:text-6xl">
+                        <span tw="text-darkCyan">{"<"}</span>
                         {title}
-                        <span
-                            css={(theme) => css`
-                                color: ${theme.color.darkCyan};
-                            `}
-                        >
-                            {">"}
-                        </span>
-                    </Text>
-                    <Text
-                        as="p"
-                        fontSize={{ xs: "1rem", xl: "1.5rem" }}
-                        lineHeight={{ xs: "1.5rem", xl: "2rem" }}
-                        marginTop="2rem"
-                    >
-                        {descreption}
-                    </Text>
-                    <Text
-                        marginTop="2rem"
-                        fontSize={{ xs: "1rem" }}
-                        lineHeight={{ xs: "1.5rem" }}
-                    >
-                        Technologies I used
-                    </Text>
+                        <span tw="text-darkCyan">{">"}</span>
+                    </div>
+                    <p tw="text-base xl:text-2xl mt-8">{description}</p>
+                    <div tw="mt-8 text-base">Technologies I used</div>
                     <div>
                         {technologies.map((item) => (
-                            <Text
-                                key={item}
-                                fontSize={{ xs: "1rem" }}
-                                lineHeight={{ xs: "1.5rem" }}
-                            >
+                            <div key={item} tw="text-base">
                                 - {item}
-                            </Text>
+                            </div>
                         ))}
                     </div>
-                    <div
-                        css={css`
-                            margin-top: auto;
-                            padding-top: 2rem;
-                        `}
-                    >
+                    <div tw="mt-auto pt-8">
                         <Button
                             target="_blank"
                             rel="noopener noreferrer"
@@ -124,8 +61,8 @@ function ProjectCard({
                         </Button>
                     </div>
                 </CardBody>
-            </Grid>
-        </Card>
+            </div>
+        </div>
     );
 }
 

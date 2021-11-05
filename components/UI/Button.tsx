@@ -1,29 +1,9 @@
-import styled from "@emotion/styled";
-import { BaseUI, BaseUIProps } from "./BaseUI";
+import tw, { styled, theme } from "twin.macro";
 
-interface Button extends BaseUIProps {}
+const Button = styled.a`
+    border: 4px solid ${(props) => theme`colors.cyan`};
 
-const Button = styled.a<BaseUIProps>`
-    display: inline-block;
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    border: 4px solid ${(props) => props.theme.color.cyan};
-
-    cursor: pointer;
-
-    background-color: transparent;
-
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-
-    :hover {
-        background-color: ${(props) => props.theme.color.darkCyan};
-    }
-
-    ${BaseUI}
+    ${tw`inline-flex items-center px-8 py-4 space-x-2 text-2xl font-bold leading-none bg-transparent cursor-pointer hover:bg-darkCyan`}
 `;
 
 export default Button;

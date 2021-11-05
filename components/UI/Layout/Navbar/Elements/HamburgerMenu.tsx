@@ -1,14 +1,7 @@
-import styled from "@emotion/styled";
-import { mq } from "utils/Responsive";
+import tw, { styled } from "twin.macro";
 
 const HamburgerMenu = styled.div`
-    display: block;
-    position: absolute;
-    right: 0;
-
-    ${mq.lg} {
-        display: none;
-    }
+    ${tw`absolute block right-2 lg:hidden`}
 `;
 
 export default HamburgerMenu;

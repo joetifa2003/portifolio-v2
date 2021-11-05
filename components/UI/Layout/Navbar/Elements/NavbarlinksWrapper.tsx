@@ -1,15 +1,7 @@
-import styled from "@emotion/styled";
-import { mq } from "utils/Responsive";
+import tw, { styled } from "twin.macro";
 
 const NavbarlinksWrapper = styled.div`
-    display: none;
-
-    margin-left: -1rem;
-    margin-right: -1rem;
-
-    ${mq.lg} {
-        display: flex;
-    }
+    ${tw`hidden -mx-4 lg:flex`}
 `;
 
 export default NavbarlinksWrapper;

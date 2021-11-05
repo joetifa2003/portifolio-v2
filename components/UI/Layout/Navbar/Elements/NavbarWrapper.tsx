@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled } from "twin.macro";
 
 const NavbarWrapper = styled.nav`
     display: flex;

@@ -1,40 +1,14 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
-import { mq } from "utils/Responsive";
-
+import tw, { styled } from "twin.macro";
 const NavbarBrandWrapper = styled.div`
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    font-family: ${(props) => props.theme.font.mono};
-
-    ${mq.md} {
-        font-size: 2.25rem;
-        line-height: 3.25rem;
-    }
+    ${tw`font-mono text-3xl font-bold cursor-pointer md:text-4xl`}
 `;
 
 function NavbarBrand() {
     return (
         <NavbarBrandWrapper>
-            <span
-                css={(theme) => css`
-                    color: ${theme.color.darkCyan};
-                `}
-            >
-                .
-            </span>
+            <span tw="text-darkCyan">.</span>
             home
-            <span
-                css={(theme) => css`
-                    color: ${theme.color.cyan};
-                `}
-            >
-                ()
-            </span>
+            <span tw="text-cyan">()</span>
         </NavbarBrandWrapper>
     );
 }

@@ -1,7 +1,6 @@
-import styled from "@emotion/styled";
-import Container from "../../Container";
+import tw, { styled } from "twin.macro";
 
-const NavbarContainer = styled(Container)`
+const NavbarContainer = styled.div`
     position: relative;
 
     display: flex;
@@ -10,6 +9,8 @@ const NavbarContainer = styled(Container)`
     justify-content: space-between;
     padding-top: 0;
     padding-bottom: 0;
+
+    ${tw`container`}
 `;
 
 export default NavbarContainer;
