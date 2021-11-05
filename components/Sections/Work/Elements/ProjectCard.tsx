@@ -5,7 +5,7 @@ const CardBody = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
 
-    ${tw`p-4 xl:p-12`}
+    ${tw`p-4 xl:p-12 bg-lightGray`}
 `;
 
 function ProjectCard({

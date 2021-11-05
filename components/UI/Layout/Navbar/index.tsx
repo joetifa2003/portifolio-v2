@@ -1,5 +1,6 @@
 import { Sling } from "hamburger-react";
 import { useEffect, useState } from "react";
+import Container from "../Container";
 import HamburgerMenu from "./Elements/HamburgerMenu";
 import MNavLinksWrapper from "./Elements/MNavlinksWrapper";
 import NavbarBrand from "./Elements/NavbarBrand";
@@ -34,7 +35,7 @@ function Navbar() {
     return (
         <NavbarWrapper>
             <ScrollToTop />
-            <div tw="container relative flex items-center justify-between">
+            <Container tw="relative flex items-center justify-between">
                 <NavbarMenu opened={menuOpened}>
                     <MNavLinksWrapper>
                         {navBarLinks.map((link) => (
@@ -63,7 +64,7 @@ function Navbar() {
                         </NavbarLink>
                     ))}
                 </NavbarlinksWrapper>
-            </div>
+            </Container>
         </NavbarWrapper>
     );
 }

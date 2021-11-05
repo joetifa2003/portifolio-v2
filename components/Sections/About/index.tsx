@@ -1,4 +1,5 @@
 import Header from "components/UI/Header";
+import Container from "components/UI/Layout/Container";
 import Section from "components/UI/Layout/Section";
 
 function About() {
@@ -9,7 +10,7 @@ function About() {
                 alt=""
                 tw="absolute bottom-0 right-0 w-[150px] sm:w-auto"
             />
-            <div tw="container">
+            <Container>
                 <Header>About me</Header>
                 <p tw="text-justify text-xl lg:text-3xl">
                     Hello! My name is Youssef and I enjoy creating things that
@@ -32,7 +33,7 @@ function About() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </Container>
         </Section>
     );
 }
