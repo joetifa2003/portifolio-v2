@@ -39,7 +39,7 @@ function ProjectCard({
                     <div tw="w-full h-full bg-[#a1a1a1]"></div>
                 )}
             </div>
-            <CardBody tw="w-full lg:w-6/12">
+            <CardBody tw="w-full lg:w-6/12 flex flex-col justify-center">
                 <div tw="font-bold text-3xl xl:text-6xl">
                     <span tw="text-darkCyan">{"<"}</span>
                     {title}
@@ -52,6 +52,7 @@ function ProjectCard({
 
                 <div tw="mt-auto pt-8">
                     <Button
+                        tw="w-full lg:w-auto"
                         target="_blank"
                         rel="noopener noreferrer"
                         href={link}

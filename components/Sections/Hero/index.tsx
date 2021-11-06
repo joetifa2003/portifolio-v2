@@ -32,6 +32,7 @@ function Hero() {
                         </div>
                         <div tw="mt-8">
                             <Button
+                                tw="w-full lg:w-auto"
                                 as="button"
                                 onClick={() => {
                                     scroller.scrollTo("about-me", {
