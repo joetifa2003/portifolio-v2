@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html>
+            <Html lang="en">
                 <Head>
                     <script
                         data-goatcounter="https://joetifa.goatcounter.com/count"

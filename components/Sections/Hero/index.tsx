@@ -9,7 +9,11 @@ function Hero() {
     return (
         <Section fullScreen tw="relative bg-gray justify-center">
             <SideDiv />
-            <img src="/hero/images/blob2.svg" tw="absolute bottom-0 right-0" />
+            <img
+                src="/hero/images/blob2.svg"
+                tw="absolute bottom-0 right-0"
+                alt=""
+            />
             <Container tw="pt-20">
                 <div tw="flex flex-col lg:flex-row lg:space-x-4 items-center">
                     <div tw="w-full lg:w-8/12 order-2 lg:order-1 mt-4 lg:mt-0">

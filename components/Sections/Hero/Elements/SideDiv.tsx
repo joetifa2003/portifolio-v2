@@ -10,7 +10,7 @@ function SideDiv() {
     return (
         <SideDivWrapper>
             <div tw="flex mt-auto">
-                <img src="/hero/images/blob1.svg" width="100%" />
+                <img src="/hero/images/blob1.svg" alt="" width="100%" />
             </div>
         </SideDivWrapper>
     );

@@ -1,7 +1,7 @@
 import Button from "components/UI/Button";
 import Chips from "components/UI/Chips";
-import tw, { styled } from "twin.macro";
 import Image from "next/image";
+import tw, { styled } from "twin.macro";
 
 const CardBody = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -33,6 +33,7 @@ function ProjectCard({
                         width={1920}
                         height={1080}
                         objectFit="cover"
+                        alt=""
                     />
                 ) : (
                     <div tw="w-full h-full bg-[#a1a1a1]"></div>
