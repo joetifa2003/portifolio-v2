@@ -1,3 +1,4 @@
+import Chips from "components/UI/Chips";
 import Header from "components/UI/Header";
 import Container from "components/UI/Layout/Container";
 import Section from "components/UI/Layout/Section";
@@ -27,11 +28,22 @@ function About() {
                     Here are a few technologies I've been working with recently
                 </div>
                 <div tw="mt-4">
-                    {["React", "Vue", "JavaScipt(ES6+)"].map((item) => (
-                        <div key={item} tw="text-xl">
-                            - {item}
-                        </div>
-                    ))}
+                    <Chips
+                        items={[
+                            "React",
+                            "Next js",
+                            "TypeScript",
+                            "Nest js",
+                            "Vue",
+                            "Golang",
+                            "Rust",
+                            "Python",
+                            "Dart/Flutter",
+                            "Prisma",
+                            "Postgresql",
+                            "Mongodb",
+                        ]}
+                    />
                 </div>
             </Container>
         </Section>
