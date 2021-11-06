@@ -43,8 +43,9 @@ function Hero() {
                         <img
                             src="/hero/images/hero.svg"
                             alt=""
-                            width="100%"
-                            height="100%"
+                            width="1024px"
+                            height="1024px"
+                            tw="w-full h-full"
                         />
                     </div>
                 </div>
