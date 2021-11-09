@@ -2,8 +2,6 @@ import About from "components/Sections/About";
 import Github from "components/Sections/Github";
 import Hero from "components/Sections/Hero";
 import Work from "components/Sections/Work";
-import Container from "components/UI/Layout/Container";
-import Section from "components/UI/Layout/Section";
 import Navbar from "components/UI/Navbar";
 import { GetServerSideProps } from "next";
 import { NextSeo } from "next-seo";
@@ -45,17 +43,6 @@ const App = ({ githubData }: { githubData: any }) => {
             <Element name="github">
                 <Github data={githubData} />
             </Element>
-
-            <Section>
-                <Container>
-                    <iframe
-                        src="https://discord.com/widget?id=907772927854923806&theme=dark"
-                        width="350"
-                        height="500"
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                    ></iframe>
-                </Container>
-            </Section>
         </>
     );
 };
