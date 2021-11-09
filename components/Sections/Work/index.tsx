@@ -6,9 +6,9 @@ import ProjectCard from "./Elements/ProjectCard";
 
 function Work() {
     return (
-        <Section fullScreen>
+        <Section>
             <Container>
-                <Header>My work</Header>
+                <Header>Some of my work</Header>
                 <ProjectCard
                     title="Burgerino"
                     imageUrl="/work/images/projects/Burgerino.jpeg"

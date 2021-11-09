@@ -19,6 +19,10 @@ const navBarLinks = [
         name: "myWork",
         to: "my-work",
     },
+    {
+        name: "github",
+        to: "github",
+    },
 ];
 
 function Navbar() {

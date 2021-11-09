@@ -27,7 +27,7 @@ function Hero() {
                             I build things for the web.
                         </div>
                         <div tw="text-2xl xl:text-3xl mt-4">
-                            I’m a full stack web devolper from Egypt that loves
+                            I’m a full stack web developer from Egypt that loves
                             javascript.
                         </div>
                         <div tw="mt-8">
