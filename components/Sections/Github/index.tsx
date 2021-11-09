@@ -5,10 +5,8 @@ import Section from "components/UI/Layout/Section";
 import { AiOutlineStar, AiOutlineFork } from "react-icons/ai";
 
 const Github = ({ data }: { data: any }) => {
-    console.log(data);
-
     return (
-        <Section fullScreen>
+        <Section>
             <Container>
                 <div tw="flex justify-between items-center">
                     <Header>Github repos</Header>
