@@ -17,6 +17,7 @@ const ScrollButton = className.div<{ $visible: boolean }>`
     cursor-pointer
     w-[64px]
     h-[64px]
+    bg-darkCyan
 
     ${({ $visible }) => ($visible ? `opacity-100` : `opacity-0`)};
 `;
