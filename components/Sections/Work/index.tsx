@@ -1,13 +1,11 @@
 import Header from "components/UI/Header";
-import Container from "components/UI/Layout/Container";
 import Section from "components/UI/Layout/Section";
-import tw from "twin.macro";
 import ProjectCard from "./Elements/ProjectCard";
 
 function Work() {
     return (
         <Section>
-            <Container>
+            <div className="container">
                 <Header>Some of my work</Header>
                 <ProjectCard
                     title="Burgerino"
@@ -16,7 +14,7 @@ function Work() {
                     technologies={["Figma", "Next js", "Emotion"]}
                     link="https://burger-ruddy.vercel.app/"
                 />
-            </Container>
+            </div>
         </Section>
     );
 }

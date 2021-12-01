@@ -1,7 +1,5 @@
-import tw, { styled } from "twin.macro";
+import className from "tailwind-styled-components";
 
-const HamburgerMenu = styled.div`
-    ${tw`absolute block right-2 lg:hidden`}
-`;
+const HamburgerMenu = className.div`absolute block right-2 lg:hidden`;
 
 export default HamburgerMenu;

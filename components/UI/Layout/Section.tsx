@@ -1,16 +1,12 @@
-import tw, { styled } from "twin.macro";
+import className from "tailwind-styled-components";
 
-interface SectionProps {
-    fullScreen?: boolean;
-}
-
-const Section = styled.section<SectionProps>`
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
-    ${(props) => props.fullScreen && "min-height: calc(100vh);"}
-    ${tw`bg-gray`}
+const Section = className.section<{ $fullScreen?: boolean }>`
+    bg-gray
+    overflow-hidden
+    flex
+    flex-col
+    
+    ${({ $fullScreen }) => ($fullScreen ? `min-h-screen` : "")}
 `;
 
 export default Section;

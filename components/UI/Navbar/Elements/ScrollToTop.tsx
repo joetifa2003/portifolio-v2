@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import { animateScroll } from "react-scroll";
-import { styled, theme } from "twin.macro";
+import className from "tailwind-styled-components";
 
-const ScrollButton = styled.div<{ visible: boolean }>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    border-radius: 999px;
-    background-color: ${theme`colors.darkCyan`};
-    transition: all 250ms ease-in-out;
-    height: 64px;
-    width: 64px;
-    cursor: pointer;
-    z-index: 15;
-    opacity: ${({ visible }) => (visible ? 1 : 0)};
+const ScrollButton = className.div<{ $visible: boolean }>`
+    flex    
+    justify-center
+    items-center
+    fixed    
+    right-4
+    bottom-4
+    transition-all
+    duration-300
+    rounded-full
+    z-20
+    cursor-pointer
+    w-[64px]
+    h-[64px]
+
+    ${({ $visible }) => ($visible ? `opacity-100` : `opacity-0`)};
 `;
 
 function ScrollToTop() {
@@ -35,7 +36,7 @@ function ScrollToTop() {
 
     return (
         <ScrollButton
-            visible={visible}
+            $visible={visible}
             onClick={() => {
                 animateScroll.scrollToTop();
             }}

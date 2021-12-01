@@ -1,28 +1,19 @@
-import { styled, theme } from "twin.macro";
+import className from "tailwind-styled-components";
 
-interface NavbarMenuProps {
-    opened: boolean;
-}
+const NavbarMenu = className.aside<{ $opened: boolean }>`
+    fixed
+    top-[80px]
+    left-0
+    w-full
+    h-full
+    transition-all
+    duration-500
+    bg-lightGray
+    transform
+    z-20
+    px-4
 
-const NavbarMenu = styled.aside<NavbarMenuProps>`
-    position: fixed;
-    top: 80px;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: ${theme`colors.lightGray`};
-
-    transition: all 500ms ease-in-out;
-
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    z-index: 15;
-
-    ${(props) =>
-        props.opened
-            ? "transform: translateY(0);"
-            : "transform: translateY(100%);"}
+    ${({ $opened }) => ($opened ? `translate-y-0` : `translate-y-full`)}
 `;
 
 export default NavbarMenu;

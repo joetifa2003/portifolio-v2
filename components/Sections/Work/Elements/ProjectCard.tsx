@@ -1,12 +1,13 @@
 import Button from "components/UI/Button";
 import Chips from "components/UI/Chips";
 import Image from "next/image";
-import tw, { styled } from "twin.macro";
+import tw from "tailwind-styled-components";
 
-const CardBody = styled.div`
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    ${tw`p-4 xl:p-12 bg-lightGray`}
+const CardBody = tw.div`
+    p-4 
+    xl:p-12 
+    bg-lightGray
+    shadow-lg
 `;
 
 function ProjectCard({
@@ -25,8 +26,8 @@ function ProjectCard({
     className?: string;
 }) {
     return (
-        <div tw="flex flex-col lg:flex-row" className={className}>
-            <div tw="flex lg:w-6/12">
+        <div className={`flex flex-col lg:flex-row ${className}`}>
+            <div className="flex lg:w-6/12">
                 {imageUrl ? (
                     <Image
                         src={imageUrl}
@@ -36,23 +37,23 @@ function ProjectCard({
                         alt=""
                     />
                 ) : (
-                    <div tw="w-full h-full bg-[#a1a1a1]"></div>
+                    <div className="w-full h-full bg-[#a1a1a1]"></div>
                 )}
             </div>
-            <CardBody tw="w-full lg:w-6/12 flex flex-col justify-center">
-                <div tw="font-bold text-3xl xl:text-6xl">
-                    <span tw="text-darkCyan">{"<"}</span>
+            <CardBody className="flex flex-col justify-center w-full lg:w-6/12">
+                <div className="text-3xl font-bold xl:text-6xl">
+                    <span className="text-darkCyan">{"<"}</span>
                     {title}
-                    <span tw="text-darkCyan">{">"}</span>
+                    <span className="text-darkCyan">{">"}</span>
                 </div>
-                <p tw="text-base xl:text-2xl mt-8">{description}</p>
+                <p className="mt-8 text-base xl:text-2xl">{description}</p>
 
-                <div tw="mt-8 text-base mb-2">Technologies I used</div>
+                <div className="mt-8 mb-2 text-base">Technologies I used</div>
                 <Chips items={technologies} />
 
-                <div tw="mt-auto pt-8">
+                <div className="pt-8 mt-auto">
                     <Button
-                        tw="w-full lg:w-auto"
+                        className="w-full lg:w-auto"
                         target="_blank"
                         rel="noopener noreferrer"
                         href={link}

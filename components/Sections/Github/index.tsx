@@ -1,39 +1,38 @@
 import Button from "components/UI/Button";
 import Header from "components/UI/Header";
-import Container from "components/UI/Layout/Container";
 import Section from "components/UI/Layout/Section";
-import { AiOutlineStar, AiOutlineFork } from "react-icons/ai";
+import { AiOutlineFork, AiOutlineStar } from "react-icons/ai";
 
 const Github = ({ data }: { data: any }) => {
     return (
         <Section>
-            <Container>
-                <div tw="flex justify-between items-center">
+            <div className="container">
+                <div className="flex items-center justify-between">
                     <Header>Github repos</Header>
                     <Button
                         target="_blank"
                         rel="noopener noreferrer"
                         href={"https://github.com/joetifa2003"}
-                        tw="hidden lg:flex"
+                        className="hidden lg:flex"
                     >
                         My github
                     </Button>
                 </div>
-                <div tw="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                     {data.map((repo: any) => (
                         <a
                             key={repo.id}
-                            tw="bg-lightGray p-4 hover:scale-[1.02] transform transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-darkCyan"
+                            className="bg-lightGray p-4 hover:scale-[1.02] transform transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-darkCyan"
                             href={repo.html_url}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <div tw="text-4xl font-bold">
-                                <span tw="text-darkCyan">{"<"}</span>
+                            <div className="text-4xl font-bold">
+                                <span className="text-darkCyan">{"<"}</span>
                                 {repo.name}
-                                <span tw="text-darkCyan">{">"}</span>
+                                <span className="text-darkCyan">{">"}</span>
                             </div>
-                            <div tw="flex space-x-4 mt-4">
+                            <div className="flex mt-4 space-x-4">
                                 {[
                                     {
                                         name: "stargazers_count",
@@ -45,7 +44,7 @@ const Github = ({ data }: { data: any }) => {
                                     },
                                 ].map(({ name, icon }) => (
                                     <div
-                                        tw="flex items-center text-xl"
+                                        className="flex items-center text-xl"
                                         key={name}
                                     >
                                         {repo[name]} {icon}
@@ -58,12 +57,12 @@ const Github = ({ data }: { data: any }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         href={"https://github.com/joetifa2003"}
-                        tw="flex lg:hidden"
+                        className="flex lg:hidden"
                     >
                         My github
                     </Button>
                 </div>
-            </Container>
+            </div>
         </Section>
     );
 };

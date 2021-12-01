@@ -1,7 +1,5 @@
-import tw, { styled } from "twin.macro";
+import className from "tailwind-styled-components";
 
-const NavbarlinksWrapper = styled.div`
-    ${tw`hidden -mx-4 lg:flex`}
-`;
+const NavbarlinksWrapper = className.div`hidden -mx-4 lg:flex`;
 
 export default NavbarlinksWrapper;

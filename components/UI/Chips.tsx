@@ -1,9 +1,9 @@
 const Chips = ({ items }: { items: string[] | object[] }) => {
     return (
-        <div tw="flex -m-2 flex-wrap">
+        <div className="flex flex-wrap -m-2">
             {items.map((item, index) => (
-                <div tw="p-2" key={index}>
-                    <div tw="text-base bg-gray px-4 rounded-md py-2 border-2 border-darkCyan">
+                <div className="p-2" key={index}>
+                    <div className="px-4 py-2 text-base border-2 rounded-md bg-gray border-darkCyan">
                         {item}
                     </div>
                 </div>

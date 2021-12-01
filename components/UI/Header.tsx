@@ -7,10 +7,9 @@ function Header({
 }) {
     return (
         <h1
-            tw="my-8 font-mono font-bold text-3xl sm:text-4xl"
-            className={className}
+            className={`${className} my-8 font-mono font-bold text-3xl sm:text-4xl`}
         >
-            <span tw="text-cyan">//</span> {children}
+            <span className="text-cyan">//</span> {children}
         </h1>
     );
 }

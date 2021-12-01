@@ -1,16 +1,12 @@
-import tw, { styled } from "twin.macro";
+import className from "tailwind-styled-components";
 
-const NavbarContainer = styled.div`
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 0;
-    padding-bottom: 0;
-
-    ${tw`container`}
+const NavbarContainer = className.div`
+    container
+    py-0
+    relative
+    flex
+    justify-between
+    items-center
 `;
 
 export default NavbarContainer;

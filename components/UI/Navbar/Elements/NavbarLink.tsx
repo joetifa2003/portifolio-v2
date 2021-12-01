@@ -1,17 +1,13 @@
 import { Link } from "react-scroll";
-import tw, { styled } from "twin.macro";
+import className from "tailwind-styled-components";
 
-const NavbarLinkWrapper = styled(Link)`
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-
-    cursor: pointer;
-
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    ${tw`font-mono`}
+const NavbarLinkWrapper = className(Link)`
+    font-mono
+    px-4
+    cursor-pointer
+    font-bold
+    text-2xl
+    leading-10
 `;
 
 function NavbarLink({
@@ -33,9 +29,9 @@ function NavbarLink({
                 onClick();
             }}
         >
-            <span tw="text-darkCyan">.</span>
+            <span className="text-darkCyan">.</span>
             {children}
-            <span tw="text-cyan">()</span>
+            <span className="text-cyan">()</span>
         </NavbarLinkWrapper>
     );
 }

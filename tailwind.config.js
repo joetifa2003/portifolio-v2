@@ -1,7 +1,11 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-    purge: [],
+    purge: [
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
+    ],
+    mode: "jit",
     presets: [],
     darkMode: false, // or 'media' or 'class'
     theme: {
@@ -635,7 +639,7 @@ module.exports = {
             ...theme("colors"),
         }),
         ringOffsetColor: (theme) => theme("colors"),
-        ringOffsetWidth: {
+        ringOffsetwidth: {
             0: "0px",
             1: "1px",
             2: "2px",
@@ -947,7 +951,7 @@ module.exports = {
         fontSmoothing: ["responsive"],
         fontStyle: ["responsive"],
         fontVariantNumeric: ["responsive"],
-        fontWeight: ["responsive"],
+        fontweight: ["responsive"],
         gap: ["responsive"],
         gradientColorStops: ["responsive", "dark", "hover", "focus"],
         grayscale: ["responsive"],
@@ -1004,7 +1008,7 @@ module.exports = {
         resize: ["responsive"],
         ringColor: ["responsive", "dark", "focus-within", "focus"],
         ringOffsetColor: ["responsive", "dark", "focus-within", "focus"],
-        ringOffsetWidth: ["responsive", "focus-within", "focus"],
+        ringOffsetwidth: ["responsive", "focus-within", "focus"],
         ringOpacity: ["responsive", "dark", "focus-within", "focus"],
         ringWidth: ["responsive", "focus-within", "focus"],
         rotate: ["responsive", "hover", "focus"],

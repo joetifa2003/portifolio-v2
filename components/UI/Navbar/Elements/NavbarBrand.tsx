@@ -1,14 +1,13 @@
-import tw, { styled } from "twin.macro";
-const NavbarBrandWrapper = styled.div`
-    ${tw`font-mono text-3xl font-bold cursor-pointer md:text-4xl`}
-`;
+import tw from "tailwind-styled-components";
+
+const NavbarBrandWrapper = tw.div`font-mono text-3xl font-bold cursor-pointer md:text-4xl`;
 
 function NavbarBrand() {
     return (
         <NavbarBrandWrapper>
-            <span tw="text-darkCyan">.</span>
+            <span className="text-darkCyan">.</span>
             home
-            <span tw="text-cyan">()</span>
+            <span className="text-cyan">()</span>
         </NavbarBrandWrapper>
     );
 }

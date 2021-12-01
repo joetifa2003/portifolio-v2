@@ -1,10 +1,9 @@
-import { styled } from "twin.macro";
+import className from "tailwind-styled-components";
 
-const MNavLinksWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-right: -1rem;
-    margin-left: -1rem;
+const MNavLinksWrapper = className.div`
+    flex
+    flex-col
+    -mx-4
 `;
 
 export default MNavLinksWrapper;
