@@ -1,6 +1,6 @@
 import className from "tailwind-styled-components";
 
-const Button = className.a`
+const BUTTON_STYLE = `
     inline-flex 
     items-center 
     justify-center 
@@ -15,6 +15,15 @@ const Button = className.a`
     hover:bg-darkCyan
     border-4
     border-cyan
+    transition-all
+    duration-250
 `;
 
-export default Button;
+export const LinkButton = className.a`
+    ${() => BUTTON_STYLE}
+`;
+
+export const Button = className.button`
+    disabled:border-slate-50
+    ${() => BUTTON_STYLE}
+`;

@@ -1,14 +1,6 @@
-import Button from "components/UI/Button";
+import { LinkButton } from "components/UI/Button";
 import Chips from "components/UI/Chips";
 import Image from "next/image";
-import tw from "tailwind-styled-components";
-
-const CardBody = tw.div`
-    p-4 
-    xl:p-12 
-    bg-lightGray
-    shadow-lg
-`;
 
 function ProjectCard({
     title,
@@ -21,7 +13,7 @@ function ProjectCard({
     title: string;
     description: string;
     technologies: string[];
-    imageUrl: string;
+    imageUrl: StaticImageData;
     link: string;
     className?: string;
 }) {
@@ -35,12 +27,13 @@ function ProjectCard({
                         height={1080}
                         objectFit="cover"
                         alt=""
+                        placeholder="blur"
                     />
                 ) : (
                     <div className="w-full h-full bg-[#a1a1a1]"></div>
                 )}
             </div>
-            <CardBody className="flex flex-col justify-center w-full lg:w-6/12">
+            <div className="flex flex-col justify-center w-full p-4 shadow-lg lg:w-6/12 xl:p-12 bg-lightGray">
                 <div className="text-3xl font-bold xl:text-6xl">
                     <span className="text-darkCyan">{"<"}</span>
                     {title}
@@ -52,16 +45,16 @@ function ProjectCard({
                 <Chips items={technologies} />
 
                 <div className="pt-8 mt-auto">
-                    <Button
+                    <LinkButton
                         className="w-full lg:w-auto"
                         target="_blank"
                         rel="noopener noreferrer"
                         href={link}
                     >
                         Go to website
-                    </Button>
+                    </LinkButton>
                 </div>
-            </CardBody>
+            </div>
         </div>
     );
 }

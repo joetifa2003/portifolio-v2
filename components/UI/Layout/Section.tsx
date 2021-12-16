@@ -2,7 +2,6 @@ import tw from "tailwind-styled-components";
 
 const Section = tw.section<{ $fullScreen?: boolean }>`
     bg-gray
-    overflow-hidden
     flex
     flex-col
     

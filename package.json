@@ -9,18 +9,26 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "axios": "^0.24.0",
+        "formik": "^2.2.9",
         "hamburger-react": "^2.4.1",
         "next": "12.0.4",
         "next-seo": "^4.24.0",
         "react": "17.0.2",
         "react-dom": "17.0.2",
+        "react-google-recaptcha": "^2.1.0",
         "react-icons": "^4.2.0",
         "react-scroll": "^1.8.2",
+        "sweetalert2": "^11.3.0",
         "swr": "^1.0.1",
-        "tailwind-styled-components": "^2.0.3"
+        "tailwind-styled-components": "^2.0.3",
+        "yup": "^0.32.11"
     },
     "devDependencies": {
+        "@next/bundle-analyzer": "^12.0.7",
+        "@tailwindcss/forms": "^0.4.0",
         "@types/react": "^17.0.8",
+        "@types/react-google-recaptcha": "^2.1.2",
         "@types/react-scroll": "^1.8.2",
         "autoprefixer": "^10.4.0",
         "postcss": "^8.4.5",

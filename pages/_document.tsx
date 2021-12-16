@@ -13,11 +13,6 @@ class MyDocument extends Document {
                         rel="stylesheet"
                     />
 
-                    <script
-                        data-goatcounter="https://joetifa.goatcounter.com/count"
-                        async
-                        src="//gc.zgo.at/count.js"
-                    ></script>
                     <meta
                         name="google-site-verification"
                         content="78OFSziPbL_z3R5xrBKVCsoQil08dEthi-KWCnQQMPs"

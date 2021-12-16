@@ -8,15 +8,19 @@ import ScrollToTop from "./Elements/ScrollToTop";
 const navBarLinks = [
     {
         name: "aboutMe",
-        to: "about-me",
+        to: "about",
     },
     {
         name: "myWork",
-        to: "my-work",
+        to: "work",
     },
     {
         name: "github",
         to: "github",
+    },
+    {
+        name: "contactMe",
+        to: "contact",
     },
 ];
 

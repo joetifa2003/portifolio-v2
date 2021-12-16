@@ -3,7 +3,7 @@ import { FaArrowUp } from "react-icons/fa";
 import { animateScroll } from "react-scroll";
 import className from "tailwind-styled-components";
 
-const ScrollButton = className.div<{ $visible: boolean }>`
+const ScrollButton = className.button<{ $visible: boolean }>`
     flex    
     justify-center
     items-center

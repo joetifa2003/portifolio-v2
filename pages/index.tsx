@@ -1,4 +1,5 @@
 import About from "components/Sections/About";
+import Contact from "components/Sections/Contact";
 import Github from "components/Sections/Github";
 import Hero from "components/Sections/Hero";
 import Work from "components/Sections/Work";
@@ -9,7 +10,7 @@ import { Element } from "react-scroll";
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const res = await fetch(
-        "https://api.github.com/users/joetifa2003/repos?sort=updated&per_page=8"
+        "https://api.github.com/users/joetifa2003/repos?sort=updated&per_page=4"
     );
 
     return {
@@ -35,14 +36,17 @@ const App = ({ githubData }: { githubData: any }) => {
             <Navbar />
             <Hero />
             <div className="py-8 space-y-8">
-                <Element name="about-me">
+                <Element name="about">
                     <About />
                 </Element>
-                <Element name="my-work">
+                <Element name="work">
                     <Work />
                 </Element>
                 <Element name="github">
                     <Github data={githubData} />
+                </Element>
+                <Element name="contact">
+                    <Contact />
                 </Element>
             </div>
         </>

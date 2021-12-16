@@ -26,10 +26,14 @@ module.exports = {
                 "8xl": ["6rem", { lineHeight: "1" }],
                 "9xl": ["8rem", { lineHeight: "1" }],
             },
+            fontFamily: {
+                sans: ["Poppins", "sans-serif"],
+                mono: ["Fira Code", "monospace"],
+            },
             container: {
                 center: true,
             },
         },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/forms")],
 };
