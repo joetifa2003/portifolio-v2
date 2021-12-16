@@ -6,8 +6,6 @@ function NavbarLink({ children, to, onClick }: any) {
             className="px-4 font-mono text-2xl font-bold leading-10 cursor-pointer "
             to={to}
             smooth={true}
-            spy={true}
-            hashSpy={true}
             onClick={() => {
                 onClick();
             }}
