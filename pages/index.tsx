@@ -34,15 +34,17 @@ const App = ({ githubData }: { githubData: any }) => {
             />
             <Navbar />
             <Hero />
-            <Element name="about-me">
-                <About />
-            </Element>
-            <Element name="my-work">
-                <Work />
-            </Element>
-            <Element name="github">
-                <Github data={githubData} />
-            </Element>
+            <div className="py-8 space-y-8">
+                <Element name="about-me">
+                    <About />
+                </Element>
+                <Element name="my-work">
+                    <Work />
+                </Element>
+                <Element name="github">
+                    <Github data={githubData} />
+                </Element>
+            </div>
         </>
     );
 };

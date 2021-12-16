@@ -1,26 +1,9 @@
 import { Link } from "react-scroll";
-import className from "tailwind-styled-components";
 
-const NavbarLinkWrapper = className(Link)`
-    font-mono
-    px-4
-    cursor-pointer
-    font-bold
-    text-2xl
-    leading-10
-`;
-
-function NavbarLink({
-    children,
-    to,
-    onClick,
-}: {
-    children: any;
-    to: string;
-    onClick: any;
-}) {
+function NavbarLink({ children, to, onClick }: any) {
     return (
-        <NavbarLinkWrapper
+        <Link
+            className="px-4 font-mono text-2xl font-bold leading-10 cursor-pointer "
             to={to}
             smooth={true}
             spy={true}
@@ -32,7 +15,7 @@ function NavbarLink({
             <span className="text-darkCyan">.</span>
             {children}
             <span className="text-cyan">()</span>
-        </NavbarLinkWrapper>
+        </Link>
     );
 }
 

@@ -11,7 +11,6 @@ const NavbarMenu = className.aside<{ $opened: boolean }>`
     bg-lightGray
     transform
     z-20
-    px-4
 
     ${({ $opened }) => ($opened ? `translate-y-0` : `translate-y-full`)}
 `;

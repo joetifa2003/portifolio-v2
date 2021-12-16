@@ -4,12 +4,7 @@ import Section from "components/UI/Layout/Section";
 
 function About() {
     return (
-        <Section className="relative">
-            <img
-                src="/about/images/blob1.svg"
-                alt=""
-                className="absolute bottom-0 right-0 w-[150px] sm:w-auto"
-            />
+        <Section>
             <div className="container">
                 <Header>About me</Header>
                 <p className="text-xl text-justify lg:text-3xl">
@@ -21,7 +16,7 @@ function About() {
                     <br />
                     <br />
                     Fast-forward to today, and i have learned alot about web
-                    devolpment and I have worked on alot of side projects!
+                    development and I have worked on alot of side projects!
                 </p>
                 <div className="mt-8 text-xl lg:text-2xl">
                     Here are a few technologies I've been working with recently

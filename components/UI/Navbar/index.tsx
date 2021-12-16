@@ -1,12 +1,8 @@
 import { Sling } from "hamburger-react";
 import { useEffect, useState } from "react";
-import HamburgerMenu from "./Elements/HamburgerMenu";
-import MNavLinksWrapper from "./Elements/MNavlinksWrapper";
 import NavbarBrand from "./Elements/NavbarBrand";
 import NavbarLink from "./Elements/NavbarLink";
-import NavbarlinksWrapper from "./Elements/NavbarlinksWrapper";
 import NavbarMenu from "./Elements/NavbarMenu";
-import NavbarWrapper from "./Elements/NavbarWrapper";
 import ScrollToTop from "./Elements/ScrollToTop";
 
 const navBarLinks = [
@@ -36,27 +32,11 @@ function Navbar() {
     }, [menuOpened]);
 
     return (
-        <NavbarWrapper>
+        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20">
             <ScrollToTop />
             <div className="container relative flex items-center justify-between">
-                <NavbarMenu $opened={menuOpened}>
-                    <MNavLinksWrapper>
-                        {navBarLinks.map((link) => (
-                            <NavbarLink
-                                key={link.to}
-                                to={link.to}
-                                onClick={() => setMenuOpened(false)}
-                            >
-                                {link.name}
-                            </NavbarLink>
-                        ))}
-                    </MNavLinksWrapper>
-                </NavbarMenu>
                 <NavbarBrand />
-                <HamburgerMenu>
-                    <Sling toggled={menuOpened} toggle={setMenuOpened} />
-                </HamburgerMenu>
-                <NavbarlinksWrapper>
+                <div className="hidden lg:flex">
                     {navBarLinks.map((link) => (
                         <NavbarLink
                             key={link.to}
@@ -66,9 +46,25 @@ function Navbar() {
                             {link.name}
                         </NavbarLink>
                     ))}
-                </NavbarlinksWrapper>
+                </div>
+                <div className="absolute block right-2 lg:hidden">
+                    <Sling toggled={menuOpened} toggle={setMenuOpened} />
+                </div>
+                <NavbarMenu $opened={menuOpened}>
+                    <div className="container flex flex-col">
+                        {navBarLinks.map((link) => (
+                            <NavbarLink
+                                key={link.to}
+                                to={link.to}
+                                onClick={() => setMenuOpened(false)}
+                            >
+                                {link.name}
+                            </NavbarLink>
+                        ))}
+                    </div>
+                </NavbarMenu>
             </div>
-        </NavbarWrapper>
+        </div>
     );
 }
 

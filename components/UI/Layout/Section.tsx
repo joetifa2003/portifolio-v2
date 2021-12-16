@@ -1,6 +1,6 @@
-import className from "tailwind-styled-components";
+import tw from "tailwind-styled-components";
 
-const Section = className.section<{ $fullScreen?: boolean }>`
+const Section = tw.section<{ $fullScreen?: boolean }>`
     bg-gray
     overflow-hidden
     flex
