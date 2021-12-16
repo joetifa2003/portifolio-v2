@@ -12,6 +12,7 @@ import {
 import { useCallback, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Swal from "sweetalert2";
+import * as yup from "yup";
 
 const Field = ({
     name,
@@ -37,9 +38,16 @@ const Field = ({
             className="w-full px-8 py-6 outline-none bg-lightGray"
             type={type}
         />
-        <ErrorMessage name={name} />
+        <ErrorMessage name={name} component="div" />
     </div>
 );
+
+const contactSchema = yup.object().shape({
+    name: yup.string().required("Name is required"),
+    email: yup.string().email().required("Email is required"),
+    message: yup.string().required("Message is required"),
+    "g-recaptcha-response": yup.string(),
+});
 
 const Contact = () => {
     const [gResponse, setGResponse] = useState("");
@@ -73,6 +81,7 @@ const Contact = () => {
             <Formik
                 initialValues={{ name: "", email: "", message: "" }}
                 onSubmit={handleSubmit}
+                validationSchema={contactSchema}
             >
                 {({ isSubmitting }) => (
                     <Form className="space-y-8">
