@@ -11,6 +11,7 @@ import {
 } from "formik";
 import { useCallback, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import LazyLoad from "react-lazyload";
 import Swal from "sweetalert2";
 import * as yup from "yup";
 
@@ -99,10 +100,14 @@ const Contact = () => {
                                 placeholder="Your message"
                                 component="textarea"
                             />
-                            <ReCAPTCHA
-                                sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
-                                onChange={(value) => setGResponse(value || "")}
-                            />
+                            <LazyLoad>
+                                <ReCAPTCHA
+                                    sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
+                                    onChange={(value) =>
+                                        setGResponse(value || "")
+                                    }
+                                />
+                            </LazyLoad>
                             <Button
                                 type="submit"
                                 className="w-full lg:w-auto"
