@@ -78,40 +78,42 @@ const Contact = () => {
     return (
         <Section className="container">
             <Header>Contact me</Header>
-            <Formik
-                initialValues={{ name: "", email: "", message: "" }}
-                onSubmit={handleSubmit}
-                validationSchema={contactSchema}
-            >
-                {({ isSubmitting }) => (
-                    <Form className="space-y-8">
-                        <div className="grid gap-8 md:grid-cols-2">
-                            <Field name="name" placeholder="Name" />
+            <div className="lg:w-1/2">
+                <Formik
+                    initialValues={{ name: "", email: "", message: "" }}
+                    onSubmit={handleSubmit}
+                    validationSchema={contactSchema}
+                >
+                    {({ isSubmitting }) => (
+                        <Form className="space-y-8">
+                            <div className="grid gap-8 md:grid-cols-2">
+                                <Field name="name" placeholder="Name" />
+                                <Field
+                                    name="email"
+                                    type="email"
+                                    placeholder="Email"
+                                />
+                            </div>
                             <Field
-                                name="email"
-                                type="email"
-                                placeholder="Email"
+                                name="message"
+                                placeholder="Your message"
+                                component="textarea"
                             />
-                        </div>
-                        <Field
-                            name="message"
-                            placeholder="Your message"
-                            component="textarea"
-                        />
-                        <ReCAPTCHA
-                            sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
-                            onChange={(value) => setGResponse(value || "")}
-                        />
-                        <Button
-                            type="submit"
-                            className="w-full lg:w-auto"
-                            disabled={isSubmitting}
-                        >
-                            Send message
-                        </Button>
-                    </Form>
-                )}
-            </Formik>
+                            <ReCAPTCHA
+                                sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
+                                onChange={(value) => setGResponse(value || "")}
+                            />
+                            <Button
+                                type="submit"
+                                className="w-full lg:w-auto"
+                                disabled={isSubmitting}
+                            >
+                                Send message
+                            </Button>
+                        </Form>
+                    )}
+                </Formik>
+            </div>
         </Section>
     );
 };

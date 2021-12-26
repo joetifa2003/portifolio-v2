@@ -9,11 +9,6 @@ function MyApp({ Component, pageProps }: any) {
                 async
                 src="//gc.zgo.at/count.js"
             ></Script>
-            {/* <Script
-                src="https://www.google.com/recaptcha/api.js"
-                async
-                defer
-            ></Script> */}
             <Component {...pageProps} />
         </>
     );

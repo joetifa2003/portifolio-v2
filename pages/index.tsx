@@ -4,11 +4,11 @@ import Github from "components/Sections/Github";
 import Hero from "components/Sections/Hero";
 import Work from "components/Sections/Work";
 import Navbar from "components/UI/Navbar";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { Element } from "react-scroll";
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     const res = await fetch(
         "https://api.github.com/users/joetifa2003/repos?sort=updated&per_page=4"
     );
@@ -17,6 +17,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         props: {
             githubData: await res.json(),
         },
+        revalidate: 10,
     };
 };
 
