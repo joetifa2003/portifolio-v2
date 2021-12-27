@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
             githubData: githubResponse.data,
             about: about.data,
         },
-        revalidate: 10,
+        revalidate: 60,
     };
 };
 
