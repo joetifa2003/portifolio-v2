@@ -3,40 +3,28 @@ import Chips from "components/UI/Chips";
 import Image from "next/image";
 
 function ProjectCard({
-    title,
+    name,
     description,
     technologies,
-    imageUrl,
-    link,
+    imageProps,
+    url,
     className,
-}: {
-    title: string;
-    description: string;
-    technologies: string[];
-    imageUrl: StaticImageData;
-    link: string;
-    className?: string;
-}) {
+}: any) {
     return (
         <div className={`flex flex-col lg:flex-row ${className}`}>
             <div className="flex lg:w-6/12">
-                {imageUrl ? (
-                    <Image
-                        src={imageUrl}
-                        width={1920}
-                        height={1080}
-                        objectFit="cover"
-                        alt=""
-                        placeholder="blur"
-                    />
-                ) : (
-                    <div className="w-full h-full bg-[#a1a1a1]"></div>
-                )}
+                <Image
+                    {...imageProps}
+                    width={1920}
+                    height={1080}
+                    objectFit="cover"
+                    alt=""
+                />
             </div>
             <div className="flex flex-col justify-center w-full p-4 shadow-lg lg:w-6/12 xl:p-12 bg-lightGray">
                 <div className="text-3xl font-bold xl:text-6xl">
                     <span className="text-darkCyan">{"<"}</span>
-                    {title}
+                    {name}
                     <span className="text-darkCyan">{">"}</span>
                 </div>
                 <p className="mt-8 text-base xl:text-2xl">{description}</p>
@@ -49,7 +37,7 @@ function ProjectCard({
                         className="w-full lg:w-auto"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={link}
+                        href={url}
                     >
                         Go to website
                     </LinkButton>

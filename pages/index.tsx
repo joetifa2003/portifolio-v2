@@ -7,27 +7,45 @@ import Work from "components/Sections/Work";
 import Navbar from "components/UI/Navbar";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
+import { getPlaiceholder } from "plaiceholder";
 import { Element } from "react-scroll";
 import api from "util/api";
 
 export const getStaticProps: GetStaticProps = async () => {
-    const [githubResponse, about] = await Promise.all([
+    const [githubResponse, about, projects] = await Promise.all([
         axios.get(
             "https://api.github.com/users/joetifa2003/repos?sort=updated&per_page=4"
         ),
         api.get("/about-me"),
+        api.get("/projects"),
     ]);
+
+    // optimize image loading
+    for (const project of projects.data) {
+        const { base64, img } = await getPlaiceholder(project.image.url, {
+            size: 64,
+        });
+
+        project.imageProps = {
+            ...img,
+            blurDataURL: base64,
+            placeholder: "blur",
+        };
+
+        delete project.image;
+    }
 
     return {
         props: {
             githubData: githubResponse.data,
             about: about.data,
+            projects: projects.data,
         },
         revalidate: 60,
     };
 };
 
-const App = ({ githubData, about }: any) => {
+const App = ({ githubData, about, projects }: any) => {
     return (
         <>
             <NextSeo
@@ -47,7 +65,7 @@ const App = ({ githubData, about }: any) => {
                     <About data={about} />
                 </Element>
                 <Element name="work">
-                    <Work />
+                    <Work projects={projects} />
                 </Element>
                 <Element name="github">
                     <Github data={githubData} />
