@@ -12,7 +12,7 @@ function Work({ projects }: any) {
                     name={project.name}
                     imageProps={project.imageProps}
                     description={project.description}
-                    technologies={project.tech_used.map(
+                    technologies={project.technologies.map(
                         (tech: any) => tech.name
                     )}
                     url={project.url}
