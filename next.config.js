@@ -1,12 +1,9 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
-const withPreact = require("next-plugin-preact");
 
-module.exports = withPreact({
-    ...withBundleAnalyzer({
-        images: {
-            domains: ["res.cloudinary.com"],
-        },
-    }),
+module.exports = withBundleAnalyzer({
+    images: {
+        domains: ["res.cloudinary.com"],
+    },
 });
