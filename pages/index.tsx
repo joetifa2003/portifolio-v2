@@ -4,7 +4,6 @@ import Contact from "components/Sections/Contact";
 import Github from "components/Sections/Github";
 import Hero from "components/Sections/Hero";
 import Work from "components/Sections/Work";
-import Navbar from "components/UI/Navbar";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { getPlaiceholder } from "plaiceholder";
@@ -60,7 +59,6 @@ const App = ({ github, about, projects }: any) => {
                     cardType: "summary_large_image",
                 }}
             />
-            <Navbar />
             <Hero />
             <div className="py-8 space-y-8">
                 <Element name="about">
