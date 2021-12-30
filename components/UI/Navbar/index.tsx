@@ -44,11 +44,11 @@ function Navbar() {
     }, [menuOpened]);
 
     return (
-        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-60 mb-4">
+        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-60 mb-4 shadow-lg">
             <ScrollToTop />
             <div className="container relative flex items-center justify-between">
                 <NavbarBrand onClick={() => setMenuOpened(false)} />
-                <div className="hidden lg:flex">
+                <div className="hidden space-x-8 lg:flex">
                     {navBarScrollLinks.map((link) => (
                         <NavbarScrollLink
                             key={link.to}
@@ -128,7 +128,7 @@ const NavbarMenu = tw.aside<{ $opened: boolean }>`
     ${({ $opened }) => ($opened ? `translate-y-0` : `translate-y-full`)}
 `;
 
-const linkStyle = "px-4 font-mono text-2xl font-bold leading-10 cursor-pointer";
+const linkStyle = "font-mono text-2xl font-bold leading-10 cursor-pointer";
 
 function NavbarScrollLink({ children, to, onClick }: any) {
     const router = useRouter();

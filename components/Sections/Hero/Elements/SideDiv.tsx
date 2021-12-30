@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 
 const SideDivWrapper = tw.div`
-    absolute top-0 left-0 h-full w-[30vw] hidden md:flex bg-lightGray shadow-lg
+    absolute top-0 left-0 h-full lg:w-[25vw] hidden lg:flex bg-lightGray
 `;
 
 function SideDiv() {
