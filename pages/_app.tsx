@@ -1,3 +1,4 @@
+import Navbar from "components/UI/Navbar";
 import Script from "next/script";
 import "styles/globals.css";
 
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }: any) {
                 async
                 src="//gc.zgo.at/count.js"
             ></Script>
+            <Navbar />
             <Component {...pageProps} />
         </>
     );
