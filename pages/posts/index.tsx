@@ -10,6 +10,7 @@ export const getStaticProps: GetStaticProps = async () => {
         props: {
             posts: posts.data,
         },
+        revalidate: 60,
     };
 };
 
@@ -28,7 +29,6 @@ const Posts = ({ posts }: any) => {
 
 const PostCard = ({ post }: any) => {
     const imageUrl = post.attributes.image.data?.attributes.url;
-    console.log(post);
     return (
         <a className="p-4 duration-500 transform shadow-xl cursor-pointer bg-lightGray rounded-xl hover:scale-105">
             {imageUrl && (
@@ -44,7 +44,7 @@ const PostCard = ({ post }: any) => {
 
             <div className="mt-8">
                 <div className="flex -m-2">
-                    {post.attributes.tags.data.map((tag: any) => (
+                    {post.attributes.tags.data?.map((tag: any) => (
                         <div className="p-2" key={tag.attributes.name}>
                             <div className="px-2 py-1 border-2 rounded-md bg-gray border-cyan">
                                 <span className="text-cyan">#</span>{" "}
