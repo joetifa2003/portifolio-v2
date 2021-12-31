@@ -1,7 +1,6 @@
 import axios from "axios";
 import { Button } from "components/UI/Button";
 import Header from "components/UI/Header";
-import Section from "components/UI/Layout/Section";
 import {
     ErrorMessage,
     Field as FormikField,
@@ -77,7 +76,7 @@ const Contact = () => {
     );
 
     return (
-        <Section className="container">
+        <section className="container">
             <Header>Contact me</Header>
             <div className="lg:w-1/2">
                 <Formik
@@ -119,7 +118,7 @@ const Contact = () => {
                     )}
                 </Formik>
             </div>
-        </Section>
+        </section>
     );
 };
 

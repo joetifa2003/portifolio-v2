@@ -1,10 +1,9 @@
 import Header from "components/UI/Header";
-import Section from "components/UI/Layout/Section";
 import ProjectCard from "./Elements/ProjectCard";
 
 function Work({ projects }: any) {
     return (
-        <Section className="container">
+        <section className="container">
             <Header>Some of my work</Header>
             <div className="space-y-8">
                 {projects.map((project: any) => (
@@ -20,7 +19,7 @@ function Work({ projects }: any) {
                     />
                 ))}
             </div>
-        </Section>
+        </section>
     );
 }
 

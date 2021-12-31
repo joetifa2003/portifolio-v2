@@ -1,11 +1,10 @@
 import { LinkButton } from "components/UI/Button";
 import Header from "components/UI/Header";
-import Section from "components/UI/Layout/Section";
 import { AiOutlineFork, AiOutlineStar } from "react-icons/ai";
 
 const Github = ({ data }: { data: any }) => {
     return (
-        <Section className="container">
+        <section className="container">
             <div className="flex items-center justify-between">
                 <Header>Github repos</Header>
                 <LinkButton
@@ -61,7 +60,7 @@ const Github = ({ data }: { data: any }) => {
                     My github
                 </LinkButton>
             </div>
-        </Section>
+        </section>
     );
 };
 

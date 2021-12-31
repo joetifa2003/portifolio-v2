@@ -1,19 +1,18 @@
 import { Button } from "components/UI/Button";
-import Section from "components/UI/Layout/Section";
 import { FaArrowDown } from "react-icons/fa";
 import { scroller } from "react-scroll";
 import SideDiv from "./Elements/SideDiv";
 
 function Hero() {
     return (
-        <Section $fullScreen className="relative justify-center bg-gray">
+        <section className="relative flex flex-col justify-center min-h-screen bg-gray">
             <SideDiv />
             <img
                 src="/hero/images/blob2.svg"
                 className="absolute bottom-0 right-0"
                 alt=""
             />
-            <div className="container pt-24">
+            <div className="container">
                 <div className="flex flex-col items-center lg:flex-row lg:space-x-8">
                     <div className="order-2 w-full mt-4 space-y-4 lg:w-8/12 lg:order-1 lg:mt-0">
                         <div className="font-mono text-darkCyan font-bold text-2xl md:text-3xl xl:text-5xl tracking-[0.2em]">
@@ -69,7 +68,7 @@ function Hero() {
                     </div>
                 </div>
             </div>
-        </Section>
+        </section>
     );
 }
 
