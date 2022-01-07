@@ -38,7 +38,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const { data: posts } = await api.get(`/posts?${query}`);
 
-    const post = posts.data[0].attributes;
+    const post = posts?.data[0]?.attributes;
+    if (!post) {
+        return { notFound: true };
+    }
+
     post.content = await serialize(post.content);
 
     const imageUrl = post.image.data?.attributes.url;
