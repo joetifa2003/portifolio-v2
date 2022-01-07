@@ -81,7 +81,7 @@ const Post = ({ post }: { post: any }) => {
                     />
                 )}
                 <Header>{post.title}</Header>
-                <div className="prose-sm lg:prose-lg prose-invert">
+                <article className="prose-sm prose sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert max-w-none prose-h1:font-mono prose-h2:font-mono">
                     <MDXRemote
                         {...post.content}
                         components={{
@@ -94,7 +94,7 @@ const Post = ({ post }: { post: any }) => {
                             ),
                         }}
                     />
-                </div>
+                </article>
             </div>
         </div>
     );
