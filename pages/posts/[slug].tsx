@@ -4,9 +4,11 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
+import "prism-themes/themes/prism-one-dark.css";
 import qs from "qs";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import prism from "remark-prism";
 import api from "util/api";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -43,7 +45,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         return { notFound: true };
     }
 
-    post.content = await serialize(post.content);
+    post.content = await serialize(post.content, {
+        mdxOptions: {
+            remarkPlugins: [prism],
+        },
+    });
 
     const imageUrl = post.image.data?.attributes.url;
 
@@ -81,7 +87,7 @@ const Post = ({ post }: { post: any }) => {
                     />
                 )}
                 <Header>{post.title}</Header>
-                <article className="prose-sm prose sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert max-w-none prose-h1:font-mono prose-h2:font-mono">
+                <article className="prose-sm prose sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert max-w-none prose-h1:font-mono prose-h2:font-mono prose-code:font-mono">
                     <MDXRemote
                         {...post.content}
                         components={{
@@ -92,6 +98,7 @@ const Post = ({ post }: { post: any }) => {
                                     effect="blur"
                                 />
                             ),
+                            p: (props: any) => <p dir="auto" {...props} />,
                         }}
                     />
                 </article>

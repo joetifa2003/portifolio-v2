@@ -22,3 +22,8 @@ body {
 .page {
     @apply flex flex-col pt-24;
 }
+
+.article {
+    unicode-bidi: plaintext;
+    text-align: start;
+}
