@@ -87,7 +87,7 @@ const Post = ({ post }: { post: any }) => {
                     />
                 )}
                 <Header>{post.title}</Header>
-                <article className="prose-sm prose sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert max-w-none prose-h1:font-mono prose-h2:font-mono prose-code:font-mono">
+                <article className="prose-sm prose sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert max-w-none prose-h1:font-mono prose-h2:font-mono prose-code:font-mono prose-img:!m-0">
                     <MDXRemote
                         {...post.content}
                         components={{
