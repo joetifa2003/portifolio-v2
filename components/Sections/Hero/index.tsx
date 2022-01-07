@@ -12,7 +12,7 @@ function Hero() {
                 className="absolute bottom-0 right-0"
                 alt=""
             />
-            <div className="container">
+            <div className="container pt-24">
                 <div className="flex flex-col items-center lg:flex-row lg:space-x-8">
                     <div className="order-2 w-full mt-4 space-y-4 lg:w-8/12 lg:order-1 lg:mt-0">
                         <div className="font-mono text-darkCyan font-bold text-2xl md:text-3xl xl:text-5xl tracking-[0.2em]">

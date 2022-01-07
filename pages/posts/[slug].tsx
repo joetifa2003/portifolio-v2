@@ -1,9 +1,12 @@
 import Header from "components/UI/Header";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 import qs from "qs";
-import ReactMarkdown from "react-markdown";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import api from "util/api";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -36,6 +39,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { data: posts } = await api.get(`/posts?${query}`);
 
     const post = posts.data[0].attributes;
+    post.content = await serialize(post.content);
+
     const imageUrl = post.image.data?.attributes.url;
 
     if (imageUrl) {
@@ -72,7 +77,20 @@ const Post = ({ post }: { post: any }) => {
                     />
                 )}
                 <Header>{post.title}</Header>
-                <ReactMarkdown>{post.content}</ReactMarkdown>
+                <div className="prose-sm lg:prose-lg prose-invert">
+                    <MDXRemote
+                        {...post.content}
+                        components={{
+                            img: (image: any) => (
+                                <LazyLoadImage
+                                    src={image.src as string}
+                                    alt={image.alt}
+                                    effect="blur"
+                                />
+                            ),
+                        }}
+                    />
+                </div>
             </div>
         </div>
     );
