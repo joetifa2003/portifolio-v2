@@ -44,7 +44,7 @@ function Navbar() {
     }, [menuOpened]);
 
     return (
-        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-60 mb-4 drop-shadow-md backdrop-blur-sm">
+        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-60 mb-4 shadow-lg">
             <ScrollToTop />
             <div className="container relative flex items-center justify-between">
                 <NavbarBrand onClick={() => setMenuOpened(false)} />
@@ -71,6 +71,28 @@ function Navbar() {
                 <div className="absolute block right-2 lg:hidden">
                     <Sling toggled={menuOpened} toggle={setMenuOpened} />
                 </div>
+                <NavbarMenu $opened={menuOpened}>
+                    <div className="container flex flex-col">
+                        {navBarScrollLinks.map((link) => (
+                            <NavbarScrollLink
+                                key={link.to}
+                                to={link.to}
+                                onClick={() => setMenuOpened(false)}
+                            >
+                                {link.name}
+                            </NavbarScrollLink>
+                        ))}
+                        {navBarLinks.map((link) => (
+                            <NavbarLink
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setMenuOpened(false)}
+                            >
+                                {link.name}
+                            </NavbarLink>
+                        ))}
+                    </div>
+                </NavbarMenu>
             </div>
         </div>
     );
