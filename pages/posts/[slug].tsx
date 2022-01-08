@@ -31,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const query = qs.stringify({
-        filter: {
+        filters: {
             slug: {
                 $eq: params?.slug,
             },
@@ -77,7 +77,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         props: {
             post,
         },
-        revalidate: 5,
+        revalidate: 10,
     };
 };
 
