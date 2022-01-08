@@ -1,5 +1,6 @@
 import Header from "components/UI/Header";
 import { GetStaticProps } from "next";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import Link from "next/link";
 import { getPlaiceholder } from "plaiceholder";
@@ -35,6 +36,16 @@ export const getStaticProps: GetStaticProps = async () => {
 const Posts = ({ posts }: any) => {
     return (
         <div className="container page">
+            <NextSeo
+                title="Youssef Ahmed | Personal Blog"
+                description="Youssef Ahmed's personal blog."
+                openGraph={{
+                    images: [{ url: "/SocialImage.png" }],
+                }}
+                twitter={{
+                    cardType: "summary_large_image",
+                }}
+            />
             <Header>Welcome to my blog</Header>
             <div className="grid lg:grid-cols-4 md:grid-cols-2">
                 {posts.map((post: any, i: any) => (
