@@ -47,7 +47,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     post.content = await serialize(post.content, {
         mdxOptions: {
-            remarkPlugins: [prism],
+            remarkPlugins: [
+                [
+                    prism,
+                    {
+                        transformInlineCode: true,
+                    },
+                ],
+            ],
         },
     });
 
@@ -69,7 +76,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         props: {
             post,
         },
-        revalidate: 60,
+        revalidate: 5,
     };
 };
 
