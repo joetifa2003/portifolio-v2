@@ -44,7 +44,7 @@ function Navbar() {
     }, [menuOpened]);
 
     return (
-        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-60 mb-4 shadow-lg">
+        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-60 mb-4 shadow-md">
             <ScrollToTop />
             <div className="container relative flex items-center justify-between">
                 <NavbarBrand onClick={() => setMenuOpened(false)} />

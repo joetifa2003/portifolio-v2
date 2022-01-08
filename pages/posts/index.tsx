@@ -59,7 +59,7 @@ const Posts = ({ posts }: any) => {
 const PostCard = ({ post }: any) => {
     return (
         <Link href={`/posts/${post.attributes.slug}`}>
-            <a className="p-4 duration-500 transform shadow-xl cursor-pointer bg-lightGray rounded-xl hover:scale-105">
+            <a className="p-4 duration-500 transform shadow-md cursor-pointer bg-lightGray rounded-xl hover:scale-105">
                 {post.imageProps && (
                     <Image
                         {...post.imageProps}
