@@ -2,6 +2,7 @@ import Header from "components/UI/Header";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 import "prism-themes/themes/prism-one-dark.css";
@@ -83,6 +84,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 const Post = ({ post }: { post: any }) => {
     return (
         <div className="page">
+            <NextSeo
+                title={post.title}
+                description={post.description || ""}
+                openGraph={{
+                    images: [
+                        {
+                            url: post.image.data?.attributes?.url as any,
+                            width: 800,
+                            height: 600,
+                        },
+                    ],
+                }}
+                twitter={{
+                    handle: "@handle",
+                    site: "@site",
+                    cardType: "summary_large_image",
+                }}
+            />
             <div className="container">
                 {post.imageProps && (
                     <Image
