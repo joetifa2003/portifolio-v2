@@ -85,7 +85,7 @@ const Post = ({ post }: { post: any }) => {
     return (
         <div className="page">
             <NextSeo
-                title={`Youssef Ahmed | ${post.title}`}
+                title={`${post.title} | YA`}
                 description={post.description || ""}
                 openGraph={{
                     images: [
