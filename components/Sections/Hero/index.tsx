@@ -1,7 +1,6 @@
 import { Button } from "components/UI/Button";
 import { FaArrowDown } from "react-icons/fa";
 import { scroller } from "react-scroll";
-import Rive, { Alignment, Fit, Layout } from "rive-react";
 import SideDiv from "./Elements/SideDiv";
 
 function Hero() {
@@ -13,9 +12,9 @@ function Hero() {
                 className="absolute bottom-0 right-0"
                 alt=""
             />
-            <div className="container h-full pt-24">
-                <div className="grid grid-cols-12 gap-8">
-                    <div className="order-2 col-span-12 mt-4 space-y-4 lg:col-span-8 lg:order-1 lg:mt-0">
+            <div className="container pt-24">
+                <div className="flex flex-col items-center lg:flex-row lg:space-x-8">
+                    <div className="order-2 w-full mt-4 space-y-4 lg:w-8/12 lg:order-1 lg:mt-0">
                         <div className="font-mono text-darkCyan font-bold text-2xl md:text-3xl xl:text-5xl tracking-[0.2em]">
                             Hi, my name is
                         </div>
@@ -58,23 +57,13 @@ function Hero() {
                             ))}
                         </div>
                     </div>
-                    <div className="order-1 col-span-12 lg:h-full lg:col-span-4 lg:order-2">
-                        {/* <img
+                    <div className="order-1 w-full lg:w-4/12 lg:order-2">
+                        <img
                             src="/hero/images/hero.svg"
                             alt=""
                             width="1024px"
                             height="1024px"
                             className="w-full h-full"
-                        /> */}
-                        <Rive
-                            src="/animations/my_logo.riv"
-                            className="h-96"
-                            layout={
-                                new Layout({
-                                    fit: Fit.Contain,
-                                    alignment: Alignment.Center,
-                                })
-                            }
                         />
                     </div>
                 </div>
