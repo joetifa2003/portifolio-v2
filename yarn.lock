@@ -448,6 +448,11 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
+"@rive-app/canvas@1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@rive-app/canvas/-/canvas-1.0.18.tgz#f6d148a78aad52ff7385ea6c43791ca847c3ff6f"
+  integrity sha512-D2eNIf+9WchAKJKDtCpwQcIe0b31NuKdn8BH6Ii+4FYRyut/awmrVITJre2px8B58lnTGxg+rSr95E99VcbgWg==
+
 "@tailwindcss/forms@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.4.0.tgz#a46715e347a32d216a3973eb67473bd29ae3798e"
@@ -3693,6 +3698,13 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rive-react@^0.0.31:
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/rive-react/-/rive-react-0.0.31.tgz#e13df9f244066e88272055033fbd14de9416c856"
+  integrity sha512-icImFq2pWEe+LJlnFFRNeghmJvNgdP9UH8epPQTwOEVv8r5HdxJ1olRHtafeX1iLJbunvLQRoEmsh9htss45NA==
+  dependencies:
+    "@rive-app/canvas" "1.0.18"
 
 run-async@^2.4.0:
   version "2.4.1"
