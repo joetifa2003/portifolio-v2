@@ -69,6 +69,7 @@ function Hero() {
                         <Rive
                             src="/animations/my_logo.riv"
                             className="h-96"
+                            animations={["start", "idle"]}
                             layout={
                                 new Layout({
                                     fit: Fit.Contain,
