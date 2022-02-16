@@ -25,7 +25,7 @@ const Github = ({ data }: { data: any }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <div className="text-3xl font-bold lg:text-4xl">
+                        <div className="text-xl font-bold lg:text-4xl">
                             <span className="text-darkCyan">{"<"}</span>
                             {repo.name}
                             <span className="text-darkCyan">{">"}</span>
