@@ -1,20 +1,41 @@
 import Chips from "components/UI/Chips";
 import Header from "components/UI/Header";
+import useTranslation from "next-translate/useTranslation";
 
-function About({ data }: any) {
+const technologies = [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Vue",
+    "Tailwind css",
+    "Express",
+    "Nest js",
+    "Prisma orm",
+    "Graphql",
+    "Golang",
+    "Rust",
+    "Python",
+    "Dart/Flutter",
+    "Postgresql",
+    "MongoDB",
+    "Firebase",
+];
+
+function About() {
+    const { t } = useTranslation("home");
+
     return (
         <section className="container">
             <Header>About me</Header>
             <p className="text-xl text-justify whitespace-pre-wrap lg:text-3xl">
-                {data.about}
+                {t("about.p-1")}
             </p>
-            <div className="mt-8 text-xl lg:text-2xl">
-                Here are a few technologies I've been working with recently
-            </div>
+            <p className="mt-8 text-xl lg:text-2xl">{t("about.p-2")}</p>
             <div className="mt-4">
                 <Chips
-                    items={data.technologies.map(
-                        (technologie: any) => technologie.name
+                    items={technologies.map(
+                        (technologies: any) => technologies
                     )}
                 />
             </div>

@@ -1,7 +1,6 @@
 import { Button } from "components/UI/Button";
 import { FaArrowDown } from "react-icons/fa";
 import { scroller } from "react-scroll";
-import Rive, { Alignment, Fit, Layout } from "rive-react";
 import SideDiv from "./Elements/SideDiv";
 
 function Hero() {
@@ -59,23 +58,12 @@ function Hero() {
                         </div>
                     </div>
                     <div className="order-1 col-span-12 lg:h-full lg:col-span-4 lg:order-2">
-                        {/* <img
+                        <img
                             src="/hero/images/hero.svg"
                             alt=""
                             width="1024px"
                             height="1024px"
                             className="w-full h-full"
-                        /> */}
-                        <Rive
-                            src="/animations/my_logo.riv"
-                            className="h-96"
-                            animations={["start", "idle"]}
-                            layout={
-                                new Layout({
-                                    fit: Fit.Contain,
-                                    alignment: Alignment.Center,
-                                })
-                            }
                         />
                     </div>
                 </div>

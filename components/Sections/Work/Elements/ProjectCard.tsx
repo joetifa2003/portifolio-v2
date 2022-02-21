@@ -4,9 +4,9 @@ import Image from "next/image";
 
 function ProjectCard({
     name,
+    image,
     description,
     technologies,
-    imageProps,
     url,
     className,
 }: any) {
@@ -14,11 +14,10 @@ function ProjectCard({
         <div className={`flex flex-col lg:flex-row ${className}`}>
             <div className="flex lg:w-6/12">
                 <Image
-                    {...imageProps}
-                    width={1920}
-                    height={1080}
+                    src={image}
                     objectFit="cover"
                     alt=""
+                    placeholder="blur"
                 />
             </div>
             <div className="flex flex-col justify-center w-full p-4 shadow-lg lg:w-6/12 xl:p-12 bg-lightGray">

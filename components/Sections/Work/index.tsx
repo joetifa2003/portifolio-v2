@@ -1,7 +1,26 @@
+import Burgerino from "assets/images/Burgerino.png";
+import Furniture from "assets/images/Furniture.png";
 import Header from "components/UI/Header";
 import ProjectCard from "./Elements/ProjectCard";
 
-function Work({ projects }: any) {
+const projects = [
+    {
+        name: "Burgerino",
+        image: Burgerino,
+        description: "Simple website for a burger restaurant.",
+        url: "https://burger-ruddy.vercel.app/",
+        technologies: ["Figma", "Next js", "Emotion css"],
+    },
+    {
+        name: "Furniture",
+        image: Furniture,
+        description: "A furniture company website.",
+        url: "https://furniture-ten.vercel.app/",
+        technologies: ["Figma", "Next js", "Tailwind css"],
+    },
+];
+
+function Work() {
     return (
         <section className="container">
             <Header>Some of my work</Header>
@@ -10,10 +29,10 @@ function Work({ projects }: any) {
                     <ProjectCard
                         key={project.name}
                         name={project.name}
-                        imageProps={project.imageProps}
+                        image={project.image}
                         description={project.description}
                         technologies={project.technologies.map(
-                            (tech: any) => tech.name
+                            (tech: any) => tech
                         )}
                         url={project.url}
                     />

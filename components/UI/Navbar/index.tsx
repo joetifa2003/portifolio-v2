@@ -25,13 +25,6 @@ const navBarScrollLinks = [
     },
 ];
 
-const navBarLinks = [
-    {
-        name: "blog",
-        href: "/posts",
-    },
-];
-
 function Navbar() {
     const [menuOpened, setMenuOpened] = useState(false);
 
@@ -58,15 +51,6 @@ function Navbar() {
                             {link.name}
                         </NavbarScrollLink>
                     ))}
-                    {navBarLinks.map((link) => (
-                        <NavbarLink
-                            key={link.href}
-                            href={link.href}
-                            onClick={() => setMenuOpened(false)}
-                        >
-                            {link.name}
-                        </NavbarLink>
-                    ))}
                 </div>
                 <div className="absolute block right-2 lg:hidden">
                     <Sling toggled={menuOpened} toggle={setMenuOpened} />
@@ -81,15 +65,6 @@ function Navbar() {
                             >
                                 {link.name}
                             </NavbarScrollLink>
-                        ))}
-                        {navBarLinks.map((link) => (
-                            <NavbarLink
-                                key={link.href}
-                                href={link.href}
-                                onClick={() => setMenuOpened(false)}
-                            >
-                                {link.name}
-                            </NavbarLink>
                         ))}
                     </div>
                 </NavbarMenu>
