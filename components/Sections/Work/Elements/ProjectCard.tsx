@@ -12,15 +12,16 @@ function ProjectCard({
 }: any) {
     return (
         <div className={`flex flex-col lg:flex-row ${className}`}>
-            <div className="flex lg:w-6/12">
+            <div className="flex lg:w-7/12">
                 <Image
                     src={image}
                     objectFit="cover"
                     alt=""
                     placeholder="blur"
+                    quality={100}
                 />
             </div>
-            <div className="flex flex-col justify-center w-full p-4 shadow-lg lg:w-6/12 xl:p-12 bg-lightGray">
+            <div className="flex flex-col justify-center w-full p-4 shadow-lg lg:w-5/12 xl:p-12 bg-lightGray">
                 <div className="text-3xl font-bold xl:text-6xl">
                     <span className="text-darkCyan">{"<"}</span>
                     {name}
