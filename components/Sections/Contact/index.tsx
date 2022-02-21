@@ -11,6 +11,7 @@ import {
 import { useCallback, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import LazyLoad from "react-lazyload";
+import { Timeline } from "react-twitter-widgets";
 import Swal from "sweetalert2";
 import * as yup from "yup";
 
@@ -78,45 +79,56 @@ const Contact = () => {
     return (
         <section className="container">
             <Header>Contact me</Header>
-            <div className="lg:w-1/2">
-                <Formik
-                    initialValues={{ name: "", email: "", message: "" }}
-                    onSubmit={handleSubmit}
-                    validationSchema={contactSchema}
-                >
-                    {({ isSubmitting }) => (
-                        <Form className="space-y-8">
-                            <div className="grid gap-8 md:grid-cols-2">
-                                <Field name="name" placeholder="Name" />
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <div className="flex flex-col">
+                    <Formik
+                        initialValues={{ name: "", email: "", message: "" }}
+                        onSubmit={handleSubmit}
+                        validationSchema={contactSchema}
+                    >
+                        {({ isSubmitting }) => (
+                            <Form className="space-y-8">
+                                <div className="grid gap-8 md:grid-cols-2">
+                                    <Field name="name" placeholder="Name" />
+                                    <Field
+                                        name="email"
+                                        type="email"
+                                        placeholder="Email"
+                                    />
+                                </div>
                                 <Field
-                                    name="email"
-                                    type="email"
-                                    placeholder="Email"
+                                    name="message"
+                                    placeholder="Your message"
+                                    component="textarea"
                                 />
-                            </div>
-                            <Field
-                                name="message"
-                                placeholder="Your message"
-                                component="textarea"
-                            />
-                            <LazyLoad>
-                                <ReCAPTCHA
-                                    sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
-                                    onChange={(value) =>
-                                        setGResponse(value || "")
-                                    }
-                                />
-                            </LazyLoad>
-                            <Button
-                                type="submit"
-                                className="w-full lg:w-auto"
-                                disabled={isSubmitting}
-                            >
-                                Send message
-                            </Button>
-                        </Form>
-                    )}
-                </Formik>
+                                <LazyLoad>
+                                    <ReCAPTCHA
+                                        sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
+                                        onChange={(value) =>
+                                            setGResponse(value || "")
+                                        }
+                                    />
+                                </LazyLoad>
+                                <Button
+                                    type="submit"
+                                    className="w-full lg:w-auto"
+                                    disabled={isSubmitting}
+                                >
+                                    Send message
+                                </Button>
+                            </Form>
+                        )}
+                    </Formik>
+                </div>
+                <div className="flex justify-center lg:justify-end">
+                    <Timeline
+                        dataSource={{
+                            sourceType: "profile",
+                            screenName: "joetifa_dev",
+                        }}
+                        options={{ theme: "dark", height: "600", width: "600" }}
+                    />
+                </div>
             </div>
         </section>
     );

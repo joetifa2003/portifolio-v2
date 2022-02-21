@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const App = ({ github }: any) => {
     return (
-        <div>
+        <div className="pb-16">
             <NextSeo
                 title="Youssef Ahmed | Full Stack web developer"
                 description="Full Stack web developer from Egypt."

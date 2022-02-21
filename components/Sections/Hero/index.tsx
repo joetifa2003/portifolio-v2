@@ -1,9 +1,12 @@
 import { Button } from "components/UI/Button";
+import useTranslation from "next-translate/useTranslation";
 import { FaArrowDown } from "react-icons/fa";
 import { scroller } from "react-scroll";
 import SideDiv from "./Elements/SideDiv";
 
 function Hero() {
+    const { t } = useTranslation("home");
+
     return (
         <section className="relative flex flex-col justify-center min-h-screen bg-gray">
             <SideDiv />
@@ -15,27 +18,24 @@ function Hero() {
             <div className="container h-full pt-24">
                 <div className="grid grid-cols-12 gap-8">
                     <div className="order-2 col-span-12 mt-4 space-y-4 lg:col-span-8 lg:order-1 lg:mt-0">
-                        <div className="font-mono text-darkCyan font-bold text-2xl md:text-3xl xl:text-5xl tracking-[0.2em]">
-                            Hi, my name is
-                        </div>
-                        <div className="text-4xl font-bold md:text-5xl xl:text-7xl">
-                            Youssef Ahmed
-                        </div>
-                        <div className="text-4xl font-bold md:text-5xl xl:text-6xl">
-                            I build things for the web.
-                        </div>
-                        <div className="text-2xl xl:text-3xl">
-                            I’m a full stack web developer from Egypt that loves
-                            javascript.
-                        </div>
+                        <h2 className="font-mono text-darkCyan font-bold text-2xl md:text-3xl xl:text-5xl tracking-[0.2em]">
+                            {t("hero.h-1")}
+                        </h2>
+                        <h1 className="text-4xl font-bold md:text-5xl xl:text-7xl">
+                            {t("hero.h-2")}
+                        </h1>
+                        <h2 className="text-4xl font-bold md:text-5xl xl:text-6xl">
+                            {t("hero.h-3")}
+                        </h2>
+                        <p className="text-2xl xl:text-3xl">{t("hero.p")}</p>
                         <div className="flex flex-col space-y-4 md:space-y-0 md:pt-8 md:space-x-8 md:flex-row">
                             {[
                                 {
-                                    name: "About me",
+                                    name: t("hero.btn-about"),
                                     section: "about",
                                 },
                                 {
-                                    name: "Contact me",
+                                    name: t("hero.btn-contact"),
                                     section: "contact",
                                 },
                             ].map(({ name, section }, i) => (
