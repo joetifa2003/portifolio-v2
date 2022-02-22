@@ -36,8 +36,8 @@ const App = ({ github }: any) => {
                     cardType: "summary_large_image",
                 }}
             />
-            <Hero />
-            <div className="py-8 space-y-8">
+            <div className="space-y-8 lg:space-y-16">
+                <Hero />
                 <Element name="about">
                     <About />
                 </Element>

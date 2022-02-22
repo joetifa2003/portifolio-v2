@@ -7,7 +7,9 @@ function Header({
 }) {
     return (
         <h1
-            className={`${className} my-8 font-mono font-bold text-2xl lg:text-3xl xl:text-5xl`}
+            className={`${
+                className || ""
+            } lg:mb-16 mb-8 font-mono font-bold text-2xl md:text-3xl xl:text-5xl`}
         >
             <span className="text-cyan">//</span> {children}
         </h1>
