@@ -3,13 +3,13 @@
         "h-1": "Hi, my name is",
         "h-2": "Youssef Ahmed",
         "h-3": "I build things for the web.",
-        "p": "I'm a full stack web developer from Egypt that loves javascript.",
+        "p": "I'm a full stack web developer from Egypt.",
         "btn-about": "About me",
         "btn-contact": "Contact me"
     },
     "about": {
         "title": "About me",
-        "p-1": "Hello! My name is Youssef and I enjoy creating things that live on the internet. My interest in web development started back in 2015 when I decided to convert an android app to a website — turns out hacking together a simple website taught me a lot about HTML, CSS & JavaScript! Then i started to learn vue js and used firebase as my backend did a lot of small projects then transitioned to react js with Typescript, Since then i used Typescript in all of my projects and never looked back.\nFast-forward to today, and i have learned a lot about web development and I have worked on a lot of side projects to improve myself in UI/UX and productivity in general. But not all my side projects is for the web. Right now i'm working on a compiler for my language written in Rust and having a lot of fun doing it!",
+        "p-1": "Hello! My name is Youssef, and I enjoy creating things that live on the internet from front to back. I have a passion for learning new technologies and am often amazed by the progress we programmers made so far. I'm a self-taught developer and I have experience building websites and mobile apps using a wide range of languages and technologies.\n\nMy programming journey started in 2016 and I'm looking forward to using my skills to build awesome things ❤",
         "p-2": "Here are a few technologies I've been working with recently"
     }
 }
