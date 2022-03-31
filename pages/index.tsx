@@ -6,14 +6,24 @@ import Hero from "components/Sections/Hero";
 import Work from "components/Sections/Work";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
+import { getPlaiceholder } from "plaiceholder";
 import { Element } from "react-scroll";
 
 export const getStaticProps: GetStaticProps = async () => {
     const github = (
         await axios.get(
-            "https://api.github.com/users/joetifa2003/repos?sort=updated&per_page=4"
+            "https://gh-pinned-repos.egoist.sh/?username=joetifa2003"
         )
     ).data;
+
+    for (const repo of github) {
+        const { base64, img } = await getPlaiceholder(repo.image);
+
+        repo.imageProps = {
+            ...img,
+            blurDataURL: base64,
+        };
+    }
 
     return {
         props: {

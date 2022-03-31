@@ -8,7 +8,7 @@ module.exports = withTM({
     ...nextTranslate({
         ...withBundleAnalyzer({
             images: {
-                domains: ["res.cloudinary.com"],
+                domains: ["opengraph.githubassets.com"],
             },
         }),
     }),

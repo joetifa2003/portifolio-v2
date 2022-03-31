@@ -1,5 +1,6 @@
 import { LinkButton } from "components/UI/Button";
 import Header from "components/UI/Header";
+import Image from "next/image";
 import { AiOutlineFork, AiOutlineStar } from "react-icons/ai";
 
 const Github = ({ data }: { data: any }) => {
@@ -20,24 +21,25 @@ const Github = ({ data }: { data: any }) => {
                 {data.map((repo: any) => (
                     <a
                         key={repo.id}
-                        className="bg-lightGray p-4 hover:scale-[1.02] transform transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-darkCyan"
-                        href={repo.html_url}
+                        className="bg-lightGray p-4 hover:scale-[1.02] transform transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-darkCyan flex flex-col space-y-4"
+                        href={repo.link}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <div className="text-xl font-bold lg:text-4xl">
                             <span className="text-darkCyan">{"<"}</span>
-                            {repo.name}
+                            {repo.repo}
                             <span className="text-darkCyan">{">"}</span>
                         </div>
-                        <div className="flex mt-4 space-x-4">
+                        <p className="text-lg">{repo.description}</p>
+                        <div className="flex space-x-4">
                             {[
                                 {
-                                    name: "stargazers_count",
+                                    name: "stars",
                                     icon: <AiOutlineStar />,
                                 },
                                 {
-                                    name: "forks_count",
+                                    name: "forks",
                                     icon: <AiOutlineFork />,
                                 },
                             ].map(({ name, icon }) => (
@@ -48,6 +50,9 @@ const Github = ({ data }: { data: any }) => {
                                     {repo[name]} {icon}
                                 </div>
                             ))}
+                        </div>
+                        <div>
+                            <Image {...repo.imageProps} placeholder="blur" />
                         </div>
                     </a>
                 ))}
