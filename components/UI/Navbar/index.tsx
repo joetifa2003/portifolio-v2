@@ -37,26 +37,11 @@ function Navbar() {
     }, [menuOpened]);
 
     return (
-        <div className="flex absolute h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-60 mb-4 shadow-md">
-            <ScrollToTop />
-            <div className="container relative flex items-center justify-between">
-                <NavbarBrand onClick={() => setMenuOpened(false)} />
-                <div className="hidden space-x-8 lg:flex">
-                    {navBarScrollLinks.map((link) => (
-                        <NavbarScrollLink
-                            key={link.to}
-                            to={link.to}
-                            onClick={() => setMenuOpened(false)}
-                        >
-                            {link.name}
-                        </NavbarScrollLink>
-                    ))}
-                </div>
-                <div className="absolute block right-2 lg:hidden">
-                    <Sling toggled={menuOpened} toggle={setMenuOpened} />
-                </div>
-                <NavbarMenu $opened={menuOpened}>
-                    <div className="container flex flex-col">
+        <>
+            <div className="flex fixed h-[80px] top-0 left-0 w-full z-20 bg-lightGray bg-opacity-50 mb-4 shadow-md backdrop-blur-xl">
+                <div className="container relative flex items-center justify-between">
+                    <NavbarBrand onClick={() => setMenuOpened(false)} />
+                    <div className="hidden space-x-8 lg:flex">
                         {navBarScrollLinks.map((link) => (
                             <NavbarScrollLink
                                 key={link.to}
@@ -67,9 +52,26 @@ function Navbar() {
                             </NavbarScrollLink>
                         ))}
                     </div>
-                </NavbarMenu>
+                    <div className="absolute block right-2 lg:hidden">
+                        <Sling toggled={menuOpened} toggle={setMenuOpened} />
+                    </div>
+                </div>
             </div>
-        </div>
+            <NavbarMenu $opened={menuOpened}>
+                <div className="container flex flex-col">
+                    {navBarScrollLinks.map((link) => (
+                        <NavbarScrollLink
+                            key={link.to}
+                            to={link.to}
+                            onClick={() => setMenuOpened(false)}
+                        >
+                            {link.name}
+                        </NavbarScrollLink>
+                    ))}
+                </div>
+            </NavbarMenu>
+            <ScrollToTop />
+        </>
     );
 }
 
@@ -97,8 +99,11 @@ const NavbarMenu = tw.aside<{ $opened: boolean }>`
     transition-all
     duration-500
     bg-lightGray
+    bg-opacity-90
+    backdrop-blur-xl
     transform
-    z-[-1]
+    z-[5]
+    pt-4
 
     ${({ $opened }) => ($opened ? `translate-y-0` : `translate-y-full`)}
 `;
@@ -122,6 +127,7 @@ function NavbarScrollLink({ children, to, onClick }: any) {
                 }
                 onClick();
             }}
+            offset={-96}
         >
             <span className="text-darkCyan">.</span>
             {children}
@@ -129,25 +135,5 @@ function NavbarScrollLink({ children, to, onClick }: any) {
         </ScrollLink>
     );
 }
-
-const NavbarLink = ({
-    href,
-    children,
-    onClick,
-}: {
-    href: string;
-    children: any;
-    onClick: any;
-}) => {
-    return (
-        <Link href={href}>
-            <a className={linkStyle} onClick={onClick}>
-                <span className="text-darkCyan">.</span>
-                {children}
-                <span className="text-cyan">()</span>
-            </a>
-        </Link>
-    );
-};
 
 export default Navbar;
