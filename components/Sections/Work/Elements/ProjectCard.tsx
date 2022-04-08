@@ -27,7 +27,9 @@ function ProjectCard({
                     {name}
                     <span className="text-darkCyan">{">"}</span>
                 </div>
-                <p className="mt-8 text-base xl:text-2xl">{description}</p>
+                <p className="mt-8 text-base whitespace-pre-wrap xl:text-2xl">
+                    {description}
+                </p>
 
                 <div className="mt-8 mb-2 text-base">Technologies I used</div>
                 <Chips items={technologies} />

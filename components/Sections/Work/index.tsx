@@ -1,30 +1,23 @@
-import Burgerino from "assets/images/Burgerino.png";
-import Furniture from "assets/images/Furniture.png";
 import SeerReal from "assets/images/SeerReal.png";
+import Wind from "assets/images/Wind.png";
 import Header from "components/UI/Header";
 import ProjectCard from "./Elements/ProjectCard";
 
 const projects = [
+    {
+        name: "WindLang",
+        image: Wind,
+        description:
+            "A simple programming language built with golang 🍃.\n\nThe website and playground for my programming language Wind.",
+        url: "https://windlang.vercel.app/",
+        technologies: ["Golang", "Next js", "Tailwindcss"],
+    },
     {
         name: "Seer Real (WIP)",
         image: SeerReal,
         description:
             "A new generation of data services company, specializing in data consulting.",
         url: "https://www.seerreal.com/",
-        technologies: ["Figma", "Next js", "Tailwind css"],
-    },
-    {
-        name: "Burgerino",
-        image: Burgerino,
-        description: "Simple website for a burger restaurant.",
-        url: "https://burger-ruddy.vercel.app/",
-        technologies: ["Figma", "Next js", "Emotion css"],
-    },
-    {
-        name: "Furniture",
-        image: Furniture,
-        description: "A furniture company website.",
-        url: "https://furniture-ten.vercel.app/",
         technologies: ["Figma", "Next js", "Tailwind css"],
     },
 ];
