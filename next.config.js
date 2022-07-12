@@ -10,6 +10,7 @@ module.exports = withTM({
             images: {
                 domains: ["opengraph.githubassets.com"],
             },
+            runtime: "experimental-edge",
         }),
     }),
 });
