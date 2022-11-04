@@ -12,7 +12,7 @@ import { Element } from "react-scroll";
 export const getStaticProps: GetStaticProps = async () => {
     const github = (
         await axios.get(
-            "https://gh-pinned-repos.egoist.sh/?username=joetifa2003"
+            "https://gh-pinned-repos.egoist.dev/?username=joetifa2003"
         )
     ).data;
 

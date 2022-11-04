@@ -120,13 +120,16 @@ const Contact = () => {
                         )}
                     </Formik>
                 </div>
-                <div className="flex justify-center lg:justify-end">
+                <div className="flex flex-col justify-center lg:justify-end">
                     <Timeline
                         dataSource={{
                             sourceType: "profile",
                             screenName: "joetifa_dev",
                         }}
-                        options={{ theme: "dark", height: "600", width: "600" }}
+                        options={{
+                            theme: "dark",
+                            height: 600,
+                        }}
                     />
                 </div>
             </div>
