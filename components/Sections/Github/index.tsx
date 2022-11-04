@@ -18,9 +18,9 @@ const Github = ({ data }: { data: any }) => {
                 </LinkButton>
             </div>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                {data.map((repo: any) => (
+                {data.map((repo: any, idx: number) => (
                     <a
-                        key={repo.name}
+                        key={idx}
                         className="bg-lightGray p-4 hover:scale-[1.02] transform transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-darkCyan flex flex-col space-y-4"
                         href={repo.link}
                         target="_blank"
