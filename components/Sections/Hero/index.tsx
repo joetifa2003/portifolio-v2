@@ -44,6 +44,7 @@ function Hero() {
                                 onClick={() => {
                                     scroller.scrollTo(section, {
                                         smooth: true,
+                                        offset: -96,
                                     });
                                 }}
                             >
